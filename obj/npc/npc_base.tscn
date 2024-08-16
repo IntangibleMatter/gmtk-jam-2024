@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://crg8hgmsabwp3"]
+
+[ext_resource type="Script" path="res://obj/npc/npc_base.gd" id="1_w6cex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3sxpi"]
+radius = 24.0
+
+[node name="NPCBase" type="Area2D"]
+script = ExtResource("1_w6cex")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3sxpi")
