@@ -60,7 +60,8 @@ const TextBubble := preload("res://addons/dialogic/Modules/DefaultLayoutParts/La
 var bubbles: Array[TextBubble] = []
 var fallback_bubble: TextBubble = null
 
-const textbubble_scene: PackedScene = preload("res://resources/dialogic/layout/bubble/text_bubble.tscn")
+#const textbubble_scene: PackedScene = preload("res://resources/dialogic/layout/bubble/text_bubble.tscn")
+const textbubble_scene: PackedScene = preload("res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble.tscn")
 
 
 func add_bubble() -> TextBubble:
