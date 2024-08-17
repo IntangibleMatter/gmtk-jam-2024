@@ -25,12 +25,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={
-"Chris": "res://resources/dialogic/characters/Chris.dch"
-}
-directories/dtl_directory={
-"test_timeline": "res://resources/dialogic/timelines/test_timeline.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -62,6 +58,10 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[global_group]
+
+NPC=""
 
 [gui]
 
