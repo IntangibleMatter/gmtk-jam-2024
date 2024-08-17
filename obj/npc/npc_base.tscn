@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://crg8hgmsabwp3"]
+
+[ext_resource type="Script" path="res://obj/npc/npc_base.gd" id="1_w6cex"]
+[ext_resource type="Material" uid="uid://b5j27ohogtyb1" path="res://resources/dialogic/layout/TextbubbleLayer/text_bubble_shader.tres" id="2_j7tpl"]
+[ext_resource type="FontFile" uid="uid://cqdbp47rr0f1c" path="res://assets/fonts/exam_sans.ttf" id="2_juxtx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3sxpi"]
+radius = 24.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_q7nvc"]
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.403922)
+
+[node name="NPCBase" type="Area2D" groups=["NPC"]]
+script = ExtResource("1_w6cex")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3sxpi")
+
+[node name="LabelBase" type="Node2D" parent="."]
+position = Vector2(0, -40)
+
+[node name="Label" type="Label" parent="LabelBase"]
+offset_left = -8.0
+offset_top = -23.0
+offset_right = 8.0
+theme_override_fonts/font = ExtResource("2_juxtx")
+theme_override_font_sizes/font_size = 16
+label_settings = SubResource("LabelSettings_q7nvc")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="LabelBase/Label"]
+z_index = -1
+material = ExtResource("2_j7tpl")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -10.0
+offset_right = 14.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
