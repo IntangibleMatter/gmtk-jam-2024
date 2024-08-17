@@ -15,10 +15,13 @@ overrides = {}
 script = ExtResource("2_x2kta")
 scene = ExtResource("4_3ggmk")
 overrides = {
+"bold_font": "\"res://assets/fonts/exam_sans_bold.ttf\"",
 "box_corner_radius": "200.0",
 "box_wobble_amount": "0.62",
 "box_wobble_detail": "0.34",
-"box_wobble_speed": "3.0"
+"box_wobble_speed": "3.0",
+"normal_font": "\"res://assets/fonts/exam_sans.ttf\"",
+"text_size": "16.0"
 }
 
 [resource]

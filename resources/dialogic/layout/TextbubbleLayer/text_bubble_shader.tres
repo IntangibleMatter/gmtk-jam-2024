@@ -14,10 +14,10 @@ noise = SubResource("FastNoiseLite_lsfnp")
 [resource]
 resource_local_to_scene = true
 shader = ExtResource("1_th3sh")
-shader_parameter/radius = 100.0
+shader_parameter/radius = 35.0
 shader_parameter/box_size = Vector2(100, 100)
 shader_parameter/box_padding = 10.0
 shader_parameter/wobble_amount = 0.2
 shader_parameter/wobble_speed = 1.0
-shader_parameter/wobble_detail = 0.34
+shader_parameter/wobble_detail = 0.5
 shader_parameter/deformation_sampler = SubResource("NoiseTexture2D_kr7hw")

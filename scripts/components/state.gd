@@ -1,6 +1,8 @@
 class_name State
 extends Node
 
+signal transition(to: String, msg: Dictionary)
+
 var machine : StateMachine
 
 func _enter(msg := {}) -> void:

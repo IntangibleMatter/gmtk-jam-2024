@@ -17,6 +17,7 @@ func _ready() -> void:
 	
 	print(state)
 	
+	state.transition.connect(transition)
 	state._enter()
 
 
@@ -38,8 +39,9 @@ func transition(to: String, msg := {}) -> void:
 		return
 	
 	state._exit()
+	state.transition.disconnect(transition)
 	state = get_node(to)
+	state.transition.connect(transition)
 	state._enter(msg)
-	
 	#prints("transitioned to", to)
 	emit_signal("transitioned", to)
