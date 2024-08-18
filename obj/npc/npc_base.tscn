@@ -26,9 +26,11 @@ position = Vector2(0, -22)
 position = Vector2(0, -40)
 
 [node name="Label" type="Label" parent="LabelBase"]
+visible = false
 offset_left = -8.0
 offset_top = -23.0
 offset_right = 8.0
+offset_bottom = 3.0
 theme_override_fonts/font = ExtResource("2_juxtx")
 theme_override_font_sizes/font_size = 16
 label_settings = SubResource("LabelSettings_q7nvc")
