@@ -73,6 +73,7 @@ script = ExtResource("1_ca0cu")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("2_5o6c2")
+initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("3_mav0t")
@@ -99,14 +100,23 @@ hframes = 4
 [node name="Head" type="Sprite2D" parent="."]
 position = Vector2(0, -64)
 texture = ExtResource("7_oec6h")
+offset = Vector2(0, -10)
 hframes = 6
 vframes = 5
 frame = 6
 
 [node name="Trenchcoat" type="Line2D" parent="."]
+position = Vector2(0, -10)
 texture_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_yo3wn")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -120)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

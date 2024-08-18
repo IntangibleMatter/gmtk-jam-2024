@@ -14,5 +14,9 @@ func _physics_update(delta: float) -> void:
 	if player.velocity.length() > player.MAX_SPEED:
 		player.velocity = player.velocity.normalized() * player.MAX_SPEED
 	
+	if movement_dir.x != 0:
+		#player.set_trenchcoat_target(-movement_dir.x)
+		player.set_facing(movement_dir.x)
 	
+	player.anim_player.play("walk")
 	player.move_and_slide()
