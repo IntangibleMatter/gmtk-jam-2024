@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bhhtxl1dso8vr" path="res://assets/graphics/chris_walkcycle.png" id="6_6tdw7"]
 [ext_resource type="Texture2D" uid="uid://iw7hnx0tpxf0" path="res://assets/graphics/child_npcs.png" id="7_oec6h"]
 [ext_resource type="Texture2D" uid="uid://burhx72lyvs2m" path="res://assets/graphics/trenchcoat_middle.png" id="8_4we73"]
-[ext_resource type="Texture2D" uid="uid://tebmx3bkccsj" path="res://assets/graphics/collar.png" id="8_8c3qo"]
-[ext_resource type="Texture2D" uid="uid://dcybocn4wr8bi" path="res://assets/graphics/trenchcoat_top.png" id="9_bah6s"]
-[ext_resource type="Texture2D" uid="uid://wn18pw2kxy70" path="res://assets/graphics/trenchcoat_bottom.png" id="11_oro1o"]
+[ext_resource type="Texture2D" uid="uid://dl03365iwt82n" path="res://assets/graphics/collar.png" id="8_8c3qo"]
+[ext_resource type="Texture2D" uid="uid://cqpmm2yp3ev8n" path="res://assets/graphics/trenchcoat_top.png" id="9_bah6s"]
+[ext_resource type="Texture2D" uid="uid://cr6isge4dcy2y" path="res://assets/graphics/trenchcoat_bottom.png" id="11_oro1o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1cstr"]
 radius = 8.0
@@ -111,7 +111,7 @@ position = Vector2(0, -46)
 texture = ExtResource("7_oec6h")
 offset = Vector2(0, -10)
 hframes = 6
-vframes = 5
+vframes = 7
 
 [node name="BubblePoint" type="Marker2D" parent="SpriteSingle/Head"]
 unique_name_in_owner = true

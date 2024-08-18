@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct3kfey27lnuk"
-path="res://.godot/imported/sidewalk_road_tiles.png-83142d6590dc811bc344233a5d13901f.ctex"
+uid="uid://d3rr2mv0dfc1c"
+path="res://.godot/imported/trenchcoat_collar1.png-984da60a5382ad448babb435c3d50758.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/sidewalk_road_tiles.png"
-dest_files=["res://.godot/imported/sidewalk_road_tiles.png-83142d6590dc811bc344233a5d13901f.ctex"]
+source_file="res://assets/graphics/trenchcoat_collar1.png"
+dest_files=["res://.godot/imported/trenchcoat_collar1.png-984da60a5382ad448babb435c3d50758.ctex"]
 
 [params]
 

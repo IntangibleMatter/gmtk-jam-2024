@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf35frajqtt65"
-path="res://.godot/imported/rickroll.jpg-a8aa6f6821a849b1f9eeaa3e933cb009.ctex"
+uid="uid://cqpmm2yp3ev8n"
+path="res://.godot/imported/trenchcoat_top.png-8d96e83ed183ef4c38b0ead21f54934c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/rickroll.jpg"
-dest_files=["res://.godot/imported/rickroll.jpg-a8aa6f6821a849b1f9eeaa3e933cb009.ctex"]
+source_file="res://assets/graphics/trenchcoat_top.png"
+dest_files=["res://.godot/imported/trenchcoat_top.png-8d96e83ed183ef4c38b0ead21f54934c.ctex"]
 
 [params]
 

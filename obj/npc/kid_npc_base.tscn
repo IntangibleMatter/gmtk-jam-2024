@@ -34,12 +34,11 @@ label_offset = -40.0
 [node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("3_fvk4f")
 hframes = 6
-vframes = 5
+vframes = 7
 
 [node name="Label" parent="LabelBase" index="0"]
 offset_left = -0.5
 offset_right = 0.5
-offset_bottom = 3.0
 
 [node name="ColorRect" parent="LabelBase/Label" index="0"]
 material = SubResource("ShaderMaterial_aw7ow")

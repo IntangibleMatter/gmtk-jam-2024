@@ -13,11 +13,13 @@ var talking: bool = false
 # trenchcoat left/right textures
 
 var head_offsets: PackedInt32Array = [
-	5, 5, 5, 5, 5, 5,
-	0, 0, 0, 0, 0, 4,
-	0,-1, 4, 0,-1,-1,
-	1, 1, 1, 1, 0, 0,
-	0,-2, 0, 0, 0,-2,
+	5, 5, 5, 5, 5, 5, # ponytails
+	0, 0, 0, 0, 0, 4, # shaggy hair
+	0,-1, 4, 0,-1,-1, # caps
+	1, 1, 1, 1, 0, 0, # poofy hair
+	0,-2, 0, 0, 0,-2, # cameos 1
+	0, 0, 0, 0, 0, 0, # cameos 2
+	-1,
 ]
 
 var trenchcoat_nodes: PackedVector2Array = []
