@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://byxxcaudo4dlm" path="res://assets/graphics/trees_and_bushes.png" id="1_7rx1u"]
 [ext_resource type="Script" path="res://scenes/levels/city.gd" id="1_g7kf5"]
-[ext_resource type="Texture2D" uid="uid://b3ndbaeauca0f" path="res://assets/graphics/outdoors_tiles.png" id="2_5git5"]
+[ext_resource type="Texture2D" uid="uid://chqrw0v1fs4le" path="res://assets/graphics/outdoors_tiles.png" id="2_5git5"]
 [ext_resource type="Texture2D" uid="uid://4sy6r5c6q8mc" path="res://assets/graphics/rickroll.png" id="4_lop8m"]
 [ext_resource type="PackedScene" uid="uid://btbhamnn5bqrn" path="res://obj/player/player_base.tscn" id="5_aw1du"]
 
