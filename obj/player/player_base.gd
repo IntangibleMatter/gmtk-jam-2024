@@ -10,6 +10,8 @@ var kid_count: int = 1
 
 var talking: bool = false
 
+# trenchcoat left/right textures
+
 var head_offsets: PackedInt32Array = [
 	5, 5, 5, 5, 5, 5,
 	0, 0, 0, 0, 0, 4,
