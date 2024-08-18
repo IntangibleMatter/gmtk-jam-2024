@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://btbhamnn5bqrn"]
+[gd_scene load_steps=18 format=3 uid="uid://btbhamnn5bqrn"]
 
 [ext_resource type="Script" path="res://obj/player/player_base.gd" id="1_ca0cu"]
 [ext_resource type="Script" path="res://scripts/components/state_machine.gd" id="2_5o6c2"]
@@ -7,27 +7,16 @@
 [ext_resource type="Script" path="res://obj/player/player_state_machine/player_state_talk.gd" id="5_1xpsd"]
 [ext_resource type="Texture2D" uid="uid://bhhtxl1dso8vr" path="res://assets/graphics/chris_walkcycle.png" id="6_6tdw7"]
 [ext_resource type="Texture2D" uid="uid://iw7hnx0tpxf0" path="res://assets/graphics/child_npcs.png" id="7_oec6h"]
+[ext_resource type="Texture2D" uid="uid://8rmb8sk7f5sq" path="res://assets/graphics/trenchcoat_middle.png" id="8_4we73"]
+[ext_resource type="Texture2D" uid="uid://j2srkpurg3ff" path="res://assets/graphics/collar.png" id="8_8c3qo"]
+[ext_resource type="Texture2D" uid="uid://o108rdoxq1wk" path="res://assets/graphics/trenchcoat_top.png" id="9_bah6s"]
+[ext_resource type="Texture2D" uid="uid://d1bxgx8d3coxc" path="res://assets/graphics/trenchcoat_bottom.png" id="11_oro1o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1cstr"]
+radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m7blp"]
 radius = 24.0
-
-[sub_resource type="Animation" id="Animation_is6ok"]
-resource_name = "walk"
-length = 0.666683
-loop_mode = 1
-step = 0.166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteSingle:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
 
 [sub_resource type="Animation" id="Animation_jwnl4"]
 length = 0.001
@@ -61,6 +50,24 @@ tracks/0/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_is6ok"]
+resource_name = "walk"
+length = 0.666683
+loop_mode = 1
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteSingle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yo3wn"]
 _data = {
 "RESET": SubResource("Animation_jwnl4"),
@@ -70,6 +77,10 @@ _data = {
 
 [node name="PlayerBase" type="CharacterBody2D"]
 script = ExtResource("1_ca0cu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_1cstr")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("2_5o6c2")
@@ -84,9 +95,6 @@ script = ExtResource("4_nkr3e")
 [node name="Talk" type="Node" parent="StateMachine"]
 script = ExtResource("5_1xpsd")
 
-[node name="BubblePoint" type="Marker2D" parent="."]
-unique_name_in_owner = true
-
 [node name="InteractionZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionZone"]
@@ -97,26 +105,44 @@ position = Vector2(0, -18)
 texture = ExtResource("6_6tdw7")
 hframes = 4
 
-[node name="Head" type="Sprite2D" parent="."]
-position = Vector2(0, -64)
+[node name="Head" type="Sprite2D" parent="SpriteSingle"]
+unique_name_in_owner = true
+position = Vector2(0, -46)
 texture = ExtResource("7_oec6h")
 offset = Vector2(0, -10)
 hframes = 6
 vframes = 5
-frame = 6
 
-[node name="Trenchcoat" type="Line2D" parent="."]
-position = Vector2(0, -10)
+[node name="BubblePoint" type="Marker2D" parent="SpriteSingle/Head"]
+unique_name_in_owner = true
+position = Vector2(0, -23)
+
+[node name="collar" type="Sprite2D" parent="SpriteSingle/Head"]
+z_index = -1
+position = Vector2(0, -6)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("8_8c3qo")
+
+[node name="TrenchcoatTop" type="Sprite2D" parent="SpriteSingle/Head"]
+z_index = 1
+position = Vector2(0, 8)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("9_bah6s")
+
+[node name="Trenchcoat" type="Line2D" parent="SpriteSingle"]
+unique_name_in_owner = true
+texture_repeat = 2
+position = Vector2(0, 8)
+width = 23.0
+texture = ExtResource("8_4we73")
 texture_mode = 1
+
+[node name="trenchcoatbottom" type="Sprite2D" parent="SpriteSingle"]
+position = Vector2(0, -5)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("11_oro1o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_yo3wn")
 }
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -120)
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0
-drag_horizontal_enabled = true
-drag_vertical_enabled = true

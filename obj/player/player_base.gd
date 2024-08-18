@@ -30,24 +30,27 @@ var trench_true_targ: float = 0
 
 @onready var bubble_point: Marker2D = %BubblePoint
 @onready var interaction_zone: Area2D = $InteractionZone
-@onready var head: Sprite2D = $Head
-@onready var trenchcoat: Line2D = $Trenchcoat
+@onready var head: Sprite2D = %Head
+@onready var trenchcoat: Line2D = %Trenchcoat
 @onready var sprite_single: Sprite2D = $SpriteSingle
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
+
+func _ready() -> void:
+	if trenchcoat_node_count <= 1:
+		head.hide()
+	else:
+		head.show()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.pressed:
 			match event.keycode:
 				KEY_PAGEDOWN:
-					trenchcoat_node_count -= 1
-					prints("pgdown", trenchcoat_node_count)
-					#trenchcoat_nodes.resize(trenchcoat_node_count)
-					set_trenchcoat_target(trench_targ)
+					change_trenchcoat_size(-1)
+					#set_trenchcoat_target(trench_targ)
 				KEY_PAGEUP:
-					trenchcoat_node_count += 1
-					prints("pgup", trenchcoat_node_count)
-					set_trenchcoat_target(trench_targ)
+					change_trenchcoat_size(1)
+					#set_trenchcoat_target(trench_targ)
 					#trenchcoat_nodes.resize(trenchcoat_node_count)
 				KEY_COMMA:
 					set_trenchcoat_target(-1)
@@ -77,11 +80,27 @@ func get_nearest_npc() -> NPCBase:
 func _process(_delta: float) -> void:
 	trenchcoat_motion()
 	if trenchcoat.points:
-		head.position = to_local(trenchcoat.to_global(trenchcoat.points[-1]))
+		head.position = sprite_single.to_local(trenchcoat.to_global(trenchcoat.points[-1]))
 		head.rotation = trenchcoat.points[-1].angle() + PI/2
 	#if trench_true_targ != trench_targ:
 		#if check_if_trenchcoat_at_target():
 			#set_trenchcoat_target(trench_true_targ)
+
+func change_trenchcoat_size(by: int) -> void:
+	trenchcoat_node_count += by
+	trenchcoat_nodes.resize(trenchcoat_node_count)
+	if trenchcoat_node_count <= 1:
+		head.hide()
+	else:
+		head.show()
+	set_trenchcoat_target(trench_targ)
+
+func set_trenchcoat_size(size: int) -> void:
+	pass
+
+func get_height() -> float:
+	return max(32, abs(head.position.y - 32))
+
 
 
 func set_facing(dir) -> void:
@@ -103,7 +122,7 @@ func talk_to_closest_npc() -> void:
 
 func set_trenchcoat_target(dir: float) -> void:
 	trench_targ = dir
-	trenchcoat_nodes.resize(trenchcoat_node_count)
+	#trenchcoat_nodes.resize(trenchcoat_node_count)
 	#if dir != 0 and not check_if_trenchcoat_at_target():
 		#trench_true_targ = dir
 		#set_trenchcoat_target(0)
@@ -128,9 +147,9 @@ func check_if_trenchcoat_at_target() -> bool:
 
 
 func trenchcoat_motion() -> void:
-	if trenchcoat.points.size() > trenchcoat_node_count:
+	while trenchcoat.points.size() > trenchcoat_node_count: # while instead of if to accommadate bigger changes
 		trenchcoat.remove_point(trenchcoat.points.size() - 1)
-	elif trenchcoat.points.size() < trenchcoat_node_count:
+	while trenchcoat.points.size() < trenchcoat_node_count:
 		trenchcoat.add_point(Vector2.ZERO)
 		#print(trenchcoat.points, trenchcoat_node_count)
 		if trenchcoat.points.size() < 3:
