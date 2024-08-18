@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3rr2mv0dfc1c"
-path="res://.godot/imported/trenchcoat_collar1.png-984da60a5382ad448babb435c3d50758.ctex"
+path="res://.godot/imported/trenchcoat_collar.png-5ccc671cf8f5c6e6196eacc552ca2b35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/trenchcoat_collar1.png"
-dest_files=["res://.godot/imported/trenchcoat_collar1.png-984da60a5382ad448babb435c3d50758.ctex"]
+source_file="res://assets/graphics/trenchcoat_collar.png"
+dest_files=["res://.godot/imported/trenchcoat_collar.png-5ccc671cf8f5c6e6196eacc552ca2b35.ctex"]
 
 [params]
 

@@ -25,8 +25,8 @@ var head_offsets: PackedInt32Array = [
 var trenchcoat_nodes: PackedVector2Array = []
 var trenchcoat_node_count: int = 0
 
-const trenchcoat_base_vec: Vector2 = Vector2(0, -34)
-const trenchcoat_base_rotation: float = deg_to_rad(30)
+const trenchcoat_base_vec: Vector2 = Vector2(0, -22)
+const trenchcoat_base_rotation: float = deg_to_rad(10)
 const trenchcoat_rotation_divisor: float = 5
 
 var trench_targ : float = 0
@@ -151,6 +151,8 @@ func check_if_trenchcoat_at_target() -> bool:
 
 
 func trenchcoat_motion() -> void:
+	if trenchcoat.points.size() == 0:
+		trenchcoat.add_point(Vector2.ZERO)
 	while trenchcoat.points.size() > trenchcoat_node_count: # while instead of if to accommadate bigger changes
 		trenchcoat.remove_point(trenchcoat.points.size() - 1)
 	while trenchcoat.points.size() < trenchcoat_node_count:
@@ -162,7 +164,8 @@ func trenchcoat_motion() -> void:
 		else:
 			trenchcoat.points[-1] = trenchcoat.points[-2] + trenchcoat_base_vec.rotated(trenchcoat.points[-2].angle() + PI/2)
 	for point in trenchcoat.points.size():
-		trenchcoat.points[point] = lerp(trenchcoat.points[point], trenchcoat_nodes[point], 5 * get_process_delta_time())
+		#trenchcoat.points[point] = lerp(trenchcoat.points[point], trenchcoat_nodes[point], 20 * get_process_delta_time() * (1.0/point))
+		trenchcoat.points[point] = lerp(trenchcoat.points[point], trenchcoat_nodes[point], 10 * get_process_delta_time() * (1.0/max(1,point)))
 
 
 func set_head(idx: int) -> void:
