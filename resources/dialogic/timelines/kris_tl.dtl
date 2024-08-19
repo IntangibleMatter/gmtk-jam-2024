@@ -1,3 +1,12 @@
 Finn: Hey Kris, what's up?
 Kris: * ...
 Finn: ...Cool, cool
+Kris: * They ask you about a bug
+- I can find that!
+	set {q_bug} = 0
+- I found it!
+	set {q_bug} = 1
+- What?
+	set {q_bug} = -1
+Finn: q_bug is now {q_bug}
+
