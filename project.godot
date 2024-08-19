@@ -27,7 +27,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Finn": "res://resources/dialogic/characters/Finn.dch",
-"Kris": "res://resources/dialogic/characters/Kris.dch"
+"Kris": "res://resources/dialogic/characters/Kris.dch",
+"Stack": "res://resources/dialogic/characters/Stack.dch"
 }
 directories/dtl_directory={
 "kris_tl": "res://resources/dialogic/timelines/kris_tl.dtl",

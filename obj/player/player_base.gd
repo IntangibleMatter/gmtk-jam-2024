@@ -39,6 +39,7 @@ var trench_true_targ: float = 0
 @onready var sprite_single: Sprite2D = $SpriteSingle
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var state_machine: StateMachine = $StateMachine
+@onready var trenchcoat_bottom: Sprite2D = $SpriteSingle/TrenchcoatBottom
 
 func _ready() -> void:
 	if trenchcoat_node_count <= 1:
@@ -99,8 +100,10 @@ func change_trenchcoat_size(by: int) -> void:
 	trenchcoat_nodes.resize(trenchcoat_node_count)
 	if trenchcoat_node_count <= 1:
 		head.hide()
+		trenchcoat_bottom.hide()
 	else:
 		head.show()
+		trenchcoat_bottom.show()
 	set_trenchcoat_target(trench_targ)
 
 func set_trenchcoat_size(size: int) -> void:

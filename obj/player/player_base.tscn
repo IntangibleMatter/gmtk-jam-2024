@@ -120,7 +120,7 @@ frame = 6
 
 [node name="BubbleMarker" type="Marker2D" parent="SpriteSingle/Head"]
 unique_name_in_owner = true
-position = Vector2(0, -23)
+position = Vector2(0, -39)
 
 [node name="TrenchcoatTop" type="Sprite2D" parent="SpriteSingle/Head"]
 z_index = 1
@@ -139,7 +139,7 @@ width = 29.0
 texture = ExtResource("8_4we73")
 texture_mode = 1
 
-[node name="trenchcoatbottom" type="Sprite2D" parent="SpriteSingle"]
+[node name="TrenchcoatBottom" type="Sprite2D" parent="SpriteSingle"]
 position = Vector2(0, -2)
 texture = ExtResource("11_oro1o")
 
