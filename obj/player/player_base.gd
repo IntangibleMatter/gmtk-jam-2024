@@ -18,7 +18,7 @@ var head_offsets: PackedInt32Array = [
 	0,-1,-2, 0,-1,-1, # calvin
 	1, 1, 1, 1, 1, 1, # poofy hair
 	0, 0, 0, 0, 0,-2, # cameos 1
-    -1,0,-1,-3, 1, 0, # cameos 2
+	-1,0,-1,-3, 1, 0, # cameos 2
 	0, 0, 1,-1,-1, 1, # cameos 3
 ]
 
@@ -32,12 +32,13 @@ const trenchcoat_rotation_divisor: float = 5
 var trench_targ : float = 0
 var trench_true_targ: float = 0
 
-@onready var bubble_point: Marker2D = %BubblePoint
+@onready var bubble_point: Marker2D = %BubbleMarker
 @onready var interaction_zone: Area2D = $InteractionZone
 @onready var head: Sprite2D = %Head
 @onready var trenchcoat: Line2D = %Trenchcoat
 @onready var sprite_single: Sprite2D = $SpriteSingle
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
+@onready var state_machine: StateMachine = $StateMachine
 
 func _ready() -> void:
 	if trenchcoat_node_count <= 1:
@@ -85,7 +86,8 @@ func _process(_delta: float) -> void:
 	trenchcoat_motion()
 	if trenchcoat.points:
 		head.position = sprite_single.to_local(trenchcoat.to_global(trenchcoat.points[-1]))
-		head.rotation = trenchcoat.points[-1].angle() + PI/2
+		#head.rotation = trenchcoat.points[-1].angle() + PI/2
+		head.rotation = trenchcoat_node_count/trenchcoat_rotation_divisor * trenchcoat_base_rotation * trench_targ
 	#if trench_true_targ != trench_targ:
 		#if check_if_trenchcoat_at_target():
 			#set_trenchcoat_target(trench_true_targ)
@@ -102,9 +104,9 @@ func change_trenchcoat_size(by: int) -> void:
 func set_trenchcoat_size(size: int) -> void:
 	pass
 
+
 func get_height() -> float:
 	return max(32, abs(head.position.y - 32))
-
 
 
 func set_facing(dir) -> void:
@@ -121,7 +123,7 @@ func talk_to_closest_npc() -> void:
 	var npc: NPCBase = get_nearest_npc()
 	if not npc:
 		return
-	npc.start_convo()
+	state_machine.transition("Talk", {"npc": npc})
 
 
 func set_trenchcoat_target(dir: float) -> void:
@@ -165,7 +167,7 @@ func trenchcoat_motion() -> void:
 			trenchcoat.points[-1] = trenchcoat.points[-2] + trenchcoat_base_vec.rotated(trenchcoat.points[-2].angle() + PI/2)
 	for point in trenchcoat.points.size():
 		#trenchcoat.points[point] = lerp(trenchcoat.points[point], trenchcoat_nodes[point], 20 * get_process_delta_time() * (1.0/point))
-		trenchcoat.points[point] = lerp(trenchcoat.points[point], trenchcoat_nodes[point], 10 * get_process_delta_time() * (1.0/max(1,point)))
+		trenchcoat.points[point] = lerp(trenchcoat.points[point], trenchcoat_nodes[point], 30 * get_process_delta_time() * (1.0/min(max(1,point), 15)))
 
 
 func set_head(idx: int) -> void:

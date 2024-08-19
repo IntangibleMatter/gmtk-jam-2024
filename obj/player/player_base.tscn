@@ -105,6 +105,10 @@ position = Vector2(0, -18)
 texture = ExtResource("6_6tdw7")
 hframes = 7
 
+[node name="collar" type="Sprite2D" parent="SpriteSingle"]
+position = Vector2(0, -67)
+texture = ExtResource("8_o1e20")
+
 [node name="Head" type="Sprite2D" parent="SpriteSingle"]
 unique_name_in_owner = true
 position = Vector2(0, -46)
@@ -114,19 +118,18 @@ hframes = 6
 vframes = 7
 frame = 6
 
-[node name="BubblePoint" type="Marker2D" parent="SpriteSingle/Head"]
+[node name="BubbleMarker" type="Marker2D" parent="SpriteSingle/Head"]
 unique_name_in_owner = true
 position = Vector2(0, -23)
-
-[node name="collar" type="Sprite2D" parent="SpriteSingle/Head"]
-z_index = -1
-position = Vector2(2, -20)
-texture = ExtResource("8_o1e20")
 
 [node name="TrenchcoatTop" type="Sprite2D" parent="SpriteSingle/Head"]
 z_index = 1
 position = Vector2(0, -5)
 texture = ExtResource("9_bah6s")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SpriteSingle/Head"]
+position = Vector2(0, -21)
+remote_path = NodePath("../../collar")
 
 [node name="Trenchcoat" type="Line2D" parent="SpriteSingle"]
 unique_name_in_owner = true
