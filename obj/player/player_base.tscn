@@ -105,12 +105,9 @@ position = Vector2(0, -19)
 texture = ExtResource("6_6tdw7")
 hframes = 7
 
-[node name="collar" type="Sprite2D" parent="SpriteSingle"]
-position = Vector2(0, -67)
-texture = ExtResource("8_o1e20")
-
 [node name="Head" type="Sprite2D" parent="SpriteSingle"]
 unique_name_in_owner = true
+visible = false
 position = Vector2(0, -46)
 texture = ExtResource("7_oec6h")
 offset = Vector2(0, -22)
@@ -127,9 +124,10 @@ z_index = 1
 position = Vector2(0, -5)
 texture = ExtResource("9_bah6s")
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SpriteSingle/Head"]
+[node name="collar" type="Sprite2D" parent="SpriteSingle/Head"]
+show_behind_parent = true
 position = Vector2(0, -21)
-remote_path = NodePath("../../collar")
+texture = ExtResource("8_o1e20")
 
 [node name="Trenchcoat" type="Line2D" parent="SpriteSingle"]
 unique_name_in_owner = true
@@ -140,6 +138,7 @@ texture = ExtResource("8_4we73")
 texture_mode = 1
 
 [node name="TrenchcoatBottom" type="Sprite2D" parent="SpriteSingle"]
+visible = false
 position = Vector2(0, -2)
 texture = ExtResource("11_oro1o")
 
