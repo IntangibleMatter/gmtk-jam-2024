@@ -69,3 +69,7 @@ func _on_area_exited(area: Area2D) -> void:
 
 func start_convo() -> void:
 	var convonode := Dialogic.start(dialogue)
+	dialogue_started.emit(convonode)
+	label.hide()
+	await Dialogic.timeline_ended
+	label.show()

@@ -4,7 +4,8 @@ extends Node2D
 @onready var camera: Camera2D = %Camera2D
 @onready var player: Player = %PlayerBase
 @onready var interactables: Node2D = $Interactables
-@onready var cam_transform: RemoteTransform2D = %PlayerBase/CamTransform
+#@onready var cam_transform: RemoteTransform2D = %PlayerBase/CamTransform
+@onready var cutscene_camera: Camera2D = %CutsceneCamera
 
 
 var cam_scale: float = 1.0
@@ -12,6 +13,7 @@ var updating_cam: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	camera.reparent(player)
 	collisionmap.modulate = Color(0,0,0,0)
 	Dialogic.timeline_started.connect(camera_cutscene)
 	Dialogic.timeline_ended.connect(end_camera_cutscene)
@@ -28,18 +30,34 @@ func _process(delta: float) -> void:
 
 
 func camera_cutscene() -> void:
-	camera.position_smoothing_enabled = true
-	camera.scale = Vector2.ONE
-	cam_transform.remote_path = ""
-	camera.global_position = player.find_child("BubbleMarker").global_position
+	#camera.position_smoothing_enabled = true
+	#camera.scale = Vector2.ONE
+	#updating_cam = true
+	#camera.reparent(self)
+	#cam_transform.update_position = false
+	#cam_transform.update_rotation = false
+	#cam_transform.update_scale = false
+	#cam_transform.remote_path = ""
+	cutscene_camera.global_position = player.find_child("BubbleMarker").global_position
+	cutscene_camera.enabled = true
+	camera.enabled = false
 
 
 func end_camera_cutscene() -> void:
-	cam_transform.remote_path = "../../../Camera2D"
+	#camera.reparent(player)
+	#cam_transform.update_position = true
+	#cam_transform.update_rotation = true
+	#cam_transform.update_scale = true
+	#updating_cam = false
+	print("TALKING OVER")
+	#cam_transform.remote_path = "../../../Camera2D"
+	cutscene_camera.enabled = false
+	camera.enabled = true
 
 
 func update_target_char(char: DialogicCharacter) -> void:
 	if not char:
+		prints("no character")
 		return
 	var cname: String = char.display_name
 	var target_char: Node2D
@@ -52,23 +70,31 @@ func update_target_char(char: DialogicCharacter) -> void:
 	if target_char:
 		var marker: Node2D = target_char.find_child("BubbleMarker")
 		if not marker:
-			camera.global_position = target_char.global_position
+			cutscene_camera.global_position = target_char.global_position
 		else:
-			camera.global_position = marker.global_position
+			cutscene_camera.global_position = marker.global_position
 		#camera.global_position = target_char.find_child("BubbleMarker").global_position
 
 
 func register_characters_in_dialogue(dianode: Node) -> void:
+	print(dianode)
 	dianode.register_character(load("res://resources/dialogic/characters/Finn.dch"), player.find_child("BubbleMarker"))
 	for child in interactables.get_children():
-		if FileAccess.file_exists("res://resources/dialogic/characters/%s.dch" % child.char_name):
-			dianode.register_character(load("res://resources/dialogic/characters/%s.dch" % child.char_name), child.find_child("BubbleMarker"))
+		if not child is Player:
+			if FileAccess.file_exists("res://resources/dialogic/characters/%s.dch" % child.char_name):
+				prints("registering", child.char_name, "with", "res://resources/dialogic/characters/%s.dch" % child.char_name )
+				dianode.register_character(load("res://resources/dialogic/characters/%s.dch" % child.char_name), child.find_child("BubbleMarker"))
 		
 
 
 func update_camera_size() -> void:
+	#get_tree().create_tween.tween_property(cam_transform, "position:y", -player.get_height()/2, 0.2)
 	var ps: float = player.get_height()
 	var sh: float = get_viewport().get_visible_rect().size.y
+	if cam_scale >= 1 and ps > 90:
+		#get_tree().create_tween().tween_property(cam_transform, "position:y", -player.get_height()/2, 0.2)
+		get_tree().create_tween().tween_property(camera, "position:y", -player.get_height()/2, 0.2)
+
 	#prints("ratio", ps/sh)
 	if ps/sh > 0.6:
 		updating_cam = true
@@ -76,6 +102,7 @@ func update_camera_size() -> void:
 		cam_scale = new_size
 		#prints("ns", new_size)
 		var tween := get_tree().create_tween().set_trans(Tween.TRANS_CUBIC).set_parallel(true)
-		tween.tween_property(cam_transform, "position:y", -player.get_height()/2, 0.2)
+		#tween.tween_property(cam_transform, "position:y", -player.get_height()/2, 0.2)
+		tween.tween_property(camera, "position:y", -player.get_height()/2, 0.2)
 		await tween.tween_property(camera, "zoom", Vector2(new_size, new_size), 0.2)
 		updating_cam = false

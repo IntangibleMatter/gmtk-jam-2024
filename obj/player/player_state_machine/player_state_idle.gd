@@ -1,12 +1,12 @@
 extends PlayerState
 
 
-func _physics_process(delta: float) -> void:
+func _physics_update(delta: float) -> void:
 	var movement_dir : Vector2 = Vector2(
 		Input.get_axis("move_left", "move_right"), 
 		Input.get_axis("move_up", "move_down")
 	)
-	
+	#print("ASKJDHKASJHDKJASHDGK")
 	if Input.is_action_just_pressed("talk_to"):
 		prints("talk", player.get_nearest_npc())
 		player.talk_to_closest_npc()
