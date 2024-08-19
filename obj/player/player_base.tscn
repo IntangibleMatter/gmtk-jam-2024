@@ -101,7 +101,7 @@ script = ExtResource("5_1xpsd")
 shape = SubResource("CircleShape2D_m7blp")
 
 [node name="SpriteSingle" type="Sprite2D" parent="."]
-position = Vector2(0, -18)
+position = Vector2(0, -19)
 texture = ExtResource("6_6tdw7")
 hframes = 7
 

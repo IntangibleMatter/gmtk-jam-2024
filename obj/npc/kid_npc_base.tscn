@@ -27,16 +27,13 @@ shader_parameter/deformation_sampler = SubResource("NoiseTexture2D_kr7hw")
 
 [node name="KidNPCBase" instance=ExtResource("1_r4i8s")]
 script = ExtResource("2_pvho5")
-kid_index = 30
+kid_index = 0
 flipped = false
-label_offset = -40.0
-bubble_marker_offset = null
+label_offset = -42.0
+bubble_marker_offset = -40.0
 
-[node name="Sprite2D" parent="." index="2"]
-texture = ExtResource("3_fvk4f")
-hframes = 6
-vframes = 7
-frame = 30
+[node name="LabelBase" parent="." index="2"]
+position = Vector2(0, -42)
 
 [node name="Label" parent="LabelBase" index="0"]
 offset_left = -0.5
@@ -48,3 +45,11 @@ offset_left = -10.0
 offset_top = -3.0
 offset_right = 10.0
 offset_bottom = 3.0
+
+[node name="Sprite2D" parent="." index="3"]
+texture = ExtResource("3_fvk4f")
+hframes = 6
+vframes = 7
+
+[node name="BubbleMarker" parent="." index="4"]
+position = Vector2(0, -40)

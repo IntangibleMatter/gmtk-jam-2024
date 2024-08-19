@@ -67,11 +67,13 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func get_nearest_npc() -> NPCBase:
 	var possible_npcs := interaction_zone.get_overlapping_areas()
+	prints("possible", possible_npcs)
 	var npcs: Array[NPCBase]
-	for npc in npcs:
+	for npc in possible_npcs:
+		prints("group", npc.get_groups())
 		if npc is NPCBase:
 			npcs.append(npc)
-
+	prints("npcs", npcs)
 	if npcs.is_empty():
 		return null
 	npcs.sort_custom(

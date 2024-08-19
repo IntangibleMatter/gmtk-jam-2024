@@ -4,7 +4,7 @@ extends Node2D
 @onready var camera: Camera2D = %Camera2D
 @onready var player: Player = %PlayerBase
 @onready var interactables: Node2D = $Interactables
-@onready var cam_transform: RemoteTransform2D = $PlayerBase/CamTransform
+@onready var cam_transform: RemoteTransform2D = %PlayerBase/CamTransform
 
 
 var cam_scale: float = 1.0
@@ -35,10 +35,12 @@ func camera_cutscene() -> void:
 
 
 func end_camera_cutscene() -> void:
-	cam_transform.remote_path = "../../Camera2D"
+	cam_transform.remote_path = "../../../Camera2D"
 
 
 func update_target_char(char: DialogicCharacter) -> void:
+	if not char:
+		return
 	var cname: String = char.display_name
 	var target_char: Node2D
 	var target: Vector2
@@ -59,8 +61,8 @@ func update_target_char(char: DialogicCharacter) -> void:
 func register_characters_in_dialogue(dianode: Node) -> void:
 	dianode.register_character(load("res://resources/dialogic/characters/Finn.dch"), player.find_child("BubbleMarker"))
 	for child in interactables.get_children():
-		if FileAccess.file_exists("res://resources/dialogic/characters/%s.dch" % child.Name):
-			dianode.register_character(load("res://resources/dialogic/characters/%s.dch" % child.Name), child.find_child("BubbleMarker"))
+		if FileAccess.file_exists("res://resources/dialogic/characters/%s.dch" % child.char_name):
+			dianode.register_character(load("res://resources/dialogic/characters/%s.dch" % child.char_name), child.find_child("BubbleMarker"))
 		
 
 
