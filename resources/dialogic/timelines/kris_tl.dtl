@@ -3,10 +3,15 @@ Kris: * ...
 Finn: ...Cool, cool
 Kris: * They ask you about a bug
 - I can find that!
-	set {q_bug} = 0
-- I found it!
 	set {q_bug} = 1
+- I found it!
+	set {q_bug} = 2
 - What?
-	set {q_bug} = -1
+	set {q_bug} = 0
 Finn: q_bug is now {q_bug}
-
+if {q_bug} == 0:
+	Kris: * They ask you to find a bug
+elif {q_bug} == 1:
+	Kris: * They ask how finding the bug is going
+elif {q_bug} == 2:
+	Kris: * They thank you for finding the bug

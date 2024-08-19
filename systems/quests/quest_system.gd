@@ -51,16 +51,16 @@ func update_quests(info: Dictionary) -> void:
 		#node = n_item
 	
 	match info.new_value:
-		0:
+		1:
 			node.show()
 			node.done = false
 			toast.frame = 1
 			anim_player.play("notify")
-		1:
+		2:
 			node.show()
 			node.done = true
 			toast.frame = 0
 			anim_player.play("notify")
-		-1, _:
+		0, _:
 			node.hide()
 			node.done = false
