@@ -38,9 +38,15 @@ func camera_cutscene() -> void:
 	#cam_transform.update_rotation = false
 	#cam_transform.update_scale = false
 	#cam_transform.remote_path = ""
-	cutscene_camera.global_position = player.find_child("BubbleMarker").global_position
+	cutscene_camera.global_position = camera.global_position
+	cutscene_camera.zoom = camera.zoom
 	cutscene_camera.enabled = true
 	camera.enabled = false
+	var tween := get_tree().create_tween().set_parallel()
+	tween.tween_property(cutscene_camera, "global_position", player.find_child("BubbleMarker").global_position, 0.2)
+	tween.tween_property(cutscene_camera, "zoom", Vector2.ONE, 0.2)
+	await tween.finished
+
 
 
 func end_camera_cutscene() -> void:
@@ -51,8 +57,13 @@ func end_camera_cutscene() -> void:
 	#updating_cam = false
 	print("TALKING OVER")
 	#cam_transform.remote_path = "../../../Camera2D"
-	cutscene_camera.enabled = false
+	var tween := get_tree().create_tween().set_parallel()
+	tween.tween_property(cutscene_camera, "global_position", camera.global_position, 0.2)
+	tween.tween_property(cutscene_camera, "zoom", camera.zoom, 0.2)
+	await tween.finished
 	camera.enabled = true
+	cutscene_camera.enabled = false
+	cutscene_camera.zoom = Vector2.ONE
 
 
 func update_target_char(char: DialogicCharacter) -> void:
@@ -69,10 +80,13 @@ func update_target_char(char: DialogicCharacter) -> void:
 	
 	if target_char:
 		var marker: Node2D = target_char.find_child("BubbleMarker")
+		var tpos: Vector2
 		if not marker:
-			cutscene_camera.global_position = target_char.global_position
+			tpos = target_char.global_position
 		else:
-			cutscene_camera.global_position = marker.global_position
+			tpos = marker.global_position
+		
+		get_tree().create_tween().tween_property(cutscene_camera, "global_position", tpos, 0.2)
 		#camera.global_position = target_char.find_child("BubbleMarker").global_position
 
 
