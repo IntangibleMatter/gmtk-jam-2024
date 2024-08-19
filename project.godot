@@ -21,18 +21,20 @@ config/icon="res://icon.svg"
 
 Data="*res://scripts/data.gd"
 Settings="*res://scripts/settings.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Quest="*res://systems/quests/quest_display.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"David": "res://resources/dialogic/characters/David.dch",
 "Finn": "res://resources/dialogic/characters/Finn.dch",
 "Kris": "res://resources/dialogic/characters/Kris.dch",
 "Stack": "res://resources/dialogic/characters/Stack.dch",
 "finn": "res://assets/graphics/finn.dch"
 }
 directories/dtl_directory={
+"david_tl": "res://resources/dialogic/timelines/david_tl.dtl",
 "kris_tl": "res://resources/dialogic/timelines/kris_tl.dtl",
 "test_timeline": "res://resources/dialogic/timelines/test_timeline.dtl",
 "theatre": "res://resources/dialogic/timelines/timeline.dtl"
@@ -55,7 +57,8 @@ animations/leave_default_wait=true
 animations/join_default_wait=true
 text/autopauses={}
 variables={
-"q_bug": -1
+"q_bug": 0,
+"q_money": 0
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://resources/dialogic/style/bubble.tres"]
