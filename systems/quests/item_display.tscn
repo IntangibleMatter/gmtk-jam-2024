@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://lhftocmbjpiq"]
+
+[ext_resource type="Texture2D" uid="uid://b1wm25aj7850" path="res://assets/graphics/checkbox.png" id="1_rjix6"]
+
+[node name="ItemDisplay" type="HBoxContainer"]
+
+[node name="IconContainer" type="Control" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="IconContainer"]
+texture = ExtResource("1_rjix6")
+centered = false
+hframes = 2
+
+[node name="Spacer" type="Control" parent="."]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 2
