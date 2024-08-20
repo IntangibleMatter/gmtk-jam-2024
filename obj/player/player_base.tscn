@@ -146,3 +146,6 @@ texture = ExtResource("11_oro1o")
 libraries = {
 "": SubResource("AnimationLibrary_yo3wn")
 }
+
+[node name="FinnBubbleMarker" type="Marker2D" parent="."]
+position = Vector2(0, -38)
