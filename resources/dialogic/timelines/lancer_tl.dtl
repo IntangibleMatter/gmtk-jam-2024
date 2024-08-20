@@ -1,6 +1,7 @@
 if {q_cookie} == 0:
 	Lancer: Hohoho! Are you clowns doing the trenchcoat trick?
-	Finn: Heck yeah! You wanna join us? We're gonna watch BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.
+	Finn: Heck yeah! You wanna join us? We're gonna watch [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS[/color]\
+.
 	Lancer: That sounds super cool. But! I wanna get something for my friend Susie. A cookie! To share! Because she's having a rough time.
 	Finn: Aww, that's nice. We'll grab one from the grocery store.
 	Lancer: Hoho, thanks! You're as fresh as toothpaste!
