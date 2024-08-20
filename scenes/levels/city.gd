@@ -95,7 +95,7 @@ func register_characters_in_dialogue(dianode: Node) -> void:
 	dianode.register_character(load("res://resources/dialogic/characters/Stack.dch"), player.find_child("BubbleMarker"))
 	dianode.register_character(load("res://resources/dialogic/characters/Finn.dch"), player.find_child("FinnBubbleMarker"))
 	for child in interactables.get_children():
-		if not child is Player:
+		if "char_name" in child:
 			if FileAccess.file_exists("res://resources/dialogic/characters/%s.dch" % child.char_name):
 				prints("registering", child.char_name, "with", "res://resources/dialogic/characters/%s.dch" % child.char_name )
 				dianode.register_character(load("res://resources/dialogic/characters/%s.dch" % child.char_name), child.find_child("BubbleMarker"))

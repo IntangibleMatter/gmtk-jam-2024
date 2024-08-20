@@ -41,13 +41,13 @@ signal dialogue_started(dialogue_node: Node)
 
 
 func _ready() -> void:
-	prints("label", label)
+	#prints("label", label)
 	label.hide()
 	label.text = char_name
 	label.size.x = 0
 	await get_tree().process_frame
 	await get_tree().process_frame
-	prints('labelsize', label.size)
+	#prints('labelsize', label.size)
 	label.position.x = -label.size.x/2
 	#label.text = char_name
 	#label.size.x = 0

@@ -8,8 +8,9 @@ func _physics_update(delta: float) -> void:
 	)
 	
 	if Input.is_action_just_pressed("talk_to"):
-		prints("talk", player.get_nearest_npc())
-		player.talk_to_closest_npc()
+		if not player.talk_delay > 0:
+			prints("talk", player.get_nearest_npc())
+			player.talk_to_closest_npc()
 	if movement_dir == Vector2.ZERO:
 		transition.emit("Idle", {})
 	else:

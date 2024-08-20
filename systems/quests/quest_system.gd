@@ -2,6 +2,9 @@ extends Node
 
 @export var quests: Dictionary = {
 	"q_bug": "Find a cool bug",
+	"q_comic": "Get the last GALAXY HIKE Comic",
+	"q_fakeid": "Get the Fake ID",
+	"q_money": "Get James' money",
 }
 
 const ITEM_DISPLAY: PackedScene = preload("res://systems/quests/item_display.tscn")
@@ -13,13 +16,14 @@ const ITEM_DISPLAY: PackedScene = preload("res://systems/quests/item_display.tsc
 
 var in_dialogue: bool = false
 
+
 func _ready() -> void:
 	if not Dialogic.is_node_ready():
 		await get_tree().process_frame
 
 	Dialogic.VAR.variable_changed.connect(update_quests)
-	Dialogic.timeline_started.connect(func()-> void: in_dialogue = true)
-	Dialogic.timeline_ended.connect(func()-> void: in_dialogue = false)
+	Dialogic.timeline_started.connect(func() -> void: in_dialogue = true)
+	Dialogic.timeline_ended.connect(func() -> void: in_dialogue = false)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -31,10 +35,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		if menu.visible:
 			#get_viewport()
 			menu.hide()
-			get_tree().current_scene.player.state_machine.transition("Idle", {})
+			Data.get_player().state_machine.transition("Idle", {})
 		else:
 			menu.show()
-			get_tree().current_scene.player.state_machine.transition("Talk", {"force_stay": true})
+			Data.get_player().state_machine.transition("Talk", {"force_stay": true})
 			#get_viewport().set_input_as_handled()
 
 
@@ -49,7 +53,7 @@ func update_quests(info: Dictionary) -> void:
 		node.text = quests.get(info.variable, info.variable)
 		item_list.add_child(node)
 		#node = n_item
-	
+
 	match info.new_value:
 		1:
 			node.show()
@@ -64,3 +68,7 @@ func update_quests(info: Dictionary) -> void:
 		0, _:
 			node.hide()
 			node.done = false
+
+
+func store_fade() -> void:
+	anim_player.play("store_fade")

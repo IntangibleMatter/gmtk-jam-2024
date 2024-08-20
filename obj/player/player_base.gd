@@ -41,6 +41,9 @@ var trench_true_targ: float = 0
 @onready var state_machine: StateMachine = $StateMachine
 @onready var trenchcoat_bottom: Sprite2D = $SpriteSingle/TrenchcoatBottom
 
+
+var talk_delay: float = 0
+
 func _ready() -> void:
 	if trenchcoat_node_count <= 1:
 		head.hide()
@@ -85,7 +88,8 @@ func get_nearest_npc() -> NPCBase:
 	)
 	return npcs[0]
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	talk_delay -= delta
 	trenchcoat_motion()
 	if trenchcoat.points:
 		head.position = sprite_single.to_local(trenchcoat.to_global(trenchcoat.points[-1]))
@@ -112,6 +116,11 @@ func set_trenchcoat_size(size: int) -> void:
 
 func get_height() -> float:
 	return max(32, abs(head.position.y - 32))
+
+
+func add_kid(index: int) -> void:
+	change_trenchcoat_size(1)
+	head.frame = index
 
 
 func set_facing(dir) -> void:

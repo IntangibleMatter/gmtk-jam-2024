@@ -14,7 +14,11 @@ func _enter(msg: Dictionary = {}) -> void:
 			print("LEAVING TALK STATE")
 			transition.emit("Idle", {})
 		return
-	Dialogic.timeline_ended.connect(func() -> void: transition.emit("Idle", {}))
+	Dialogic.timeline_ended.connect(
+		func() -> void: 
+			transition.emit("Idle", {})
+			player.talk_delay = 0.75
+	)
 	npc.start_convo()
 	
 	
