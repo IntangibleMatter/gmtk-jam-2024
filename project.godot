@@ -27,18 +27,26 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Alex": "res://resources/dialogic/characters/Alex.dch",
 "David": "res://resources/dialogic/characters/David.dch",
 "Finn": "res://resources/dialogic/characters/Finn.dch",
 "James": "res://resources/dialogic/characters/James.dch",
+"Jane": "res://resources/dialogic/characters/Jane.dch",
 "Kris": "res://resources/dialogic/characters/Kris.dch",
+"Muhammad": "res://resources/dialogic/characters/Muhammad.dch",
+"Paublo": "res://resources/dialogic/characters/Paublo.dch",
 "Stack": "res://resources/dialogic/characters/Stack.dch",
+"Steve": "res://resources/dialogic/characters/Steve.dch",
 "Ticket_Guy": "res://resources/dialogic/characters/Ticket_Guy.dch",
 "finn": "res://assets/graphics/finn.dch"
 }
 directories/dtl_directory={
+"alex": "res://resources/dialogic/timelines/alex.dtl",
 "david_tl": "res://resources/dialogic/timelines/david_tl.dtl",
 "james": "res://resources/dialogic/timelines/james.dtl",
 "kris_tl": "res://resources/dialogic/timelines/kris_tl.dtl",
+"muhammad_tl": "res://resources/dialogic/timelines/muhammad_tl.dtl",
+"steve": "res://resources/dialogic/timelines/steve.dtl",
 "test_timeline": "res://resources/dialogic/timelines/test_timeline.dtl",
 "theatre": "res://resources/dialogic/timelines/timeline.dtl",
 "ticket_guy_tl": "res://resources/dialogic/timelines/ticket_guy_tl.dtl"
@@ -61,9 +69,12 @@ animations/leave_default_wait=true
 animations/join_default_wait=true
 text/autopauses={}
 variables={
+"q_basketball": 0,
 "q_bug": 0,
 "q_comic": 0,
-"q_fakeid": 0.0,
+"q_fakeid": 0,
+"q_figure": 0,
+"q_letter": 0,
 "q_money": 0
 }
 glossary/default_case_sensitive=true
