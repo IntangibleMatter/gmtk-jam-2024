@@ -29,15 +29,19 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "David": "res://resources/dialogic/characters/David.dch",
 "Finn": "res://resources/dialogic/characters/Finn.dch",
+"James": "res://resources/dialogic/characters/James.dch",
 "Kris": "res://resources/dialogic/characters/Kris.dch",
 "Stack": "res://resources/dialogic/characters/Stack.dch",
+"Ticket_Guy": "res://resources/dialogic/characters/Ticket_Guy.dch",
 "finn": "res://assets/graphics/finn.dch"
 }
 directories/dtl_directory={
 "david_tl": "res://resources/dialogic/timelines/david_tl.dtl",
+"james": "res://resources/dialogic/timelines/james.dtl",
 "kris_tl": "res://resources/dialogic/timelines/kris_tl.dtl",
 "test_timeline": "res://resources/dialogic/timelines/test_timeline.dtl",
-"theatre": "res://resources/dialogic/timelines/timeline.dtl"
+"theatre": "res://resources/dialogic/timelines/timeline.dtl",
+"ticket_guy_tl": "res://resources/dialogic/timelines/ticket_guy_tl.dtl"
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -58,6 +62,8 @@ animations/join_default_wait=true
 text/autopauses={}
 variables={
 "q_bug": 0,
+"q_comic": 0,
+"q_fakeid": 0.0,
 "q_money": 0
 }
 glossary/default_case_sensitive=true

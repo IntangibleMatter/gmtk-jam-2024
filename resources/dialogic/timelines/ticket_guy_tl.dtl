@@ -1,0 +1,35 @@
+if {q_money} == 0:
+	Ticket_Guy: So, that’s one ticket for… [br]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?
+	Finn: Yes please.
+	Ticket_Guy: Yeah, no, that's not happening. [br]You're like 8.
+	Finn: I'm ten.
+	Ticket_Guy: This is an R rated movie.
+	Finn: So?
+	Ticket_Guy: So scram, kid. [br]Unless you wanna get a ticket for TALKING ANIMALS 3\: THE POWER OF FRIENDSHIP?
+	Finn: No way.
+	Ticket_Guy: C’mon man, the first two were great. [br]What do you have against talking animals?
+	Finn: They're lame and so are you.
+	Ticket_Guy: ...Rude.
+	Finn: (i have an idea. my friend David has a trenchcoat, I should go find him.)
+elif {q_money} == 1:
+	Ticket_Guy: Still not happening, kid. 
+elif {q_money} == 2:
+	Stack: Here you go, Ticket Guy. 12 dollars.
+	Ticket_Guy: For...?
+	Stack: One adult ticket for BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.
+	Ticket_Guy: ...Can I see some ID?
+	Stack: What? You don't believe that we- that I am a fully mature adult?[br]My name is... Arthur. I have a job at the toothpaste factory and I pay taxes like anyone else.
+	Ticket_Guy: Sure. Can I see some ID, Arthur of the toothpaste factory?
+	Stack: I... left it at home? [br](anyone know where we can find some fake ID?) [br](i know a guy, but he lives at the very top of the tallest building. we're gonna need to be taller)
+	set {q_fakeid} = 1
+if {q_fakeid} == 1:
+	Ticket_Guy: Found your ID yet?
+	Stack: Uhhh... nope! Still looking!
+elif {q_fakeid} == 2:
+	Stack: Found my ID! Here you go!
+	Ticket_Guy: Huh. How about that?
+	Stack: So can we see the movie now? [br](ow) I mean, can I see the movie now?
+	Ticket_Guy: I hate to break it to you, Arthur of the toothpaste factory... [br]But the movie started without you. [br]Like, half an hour ago.
+	Stack: ...Seriously?
+	Ticket_Guy: Yeah. Sorry. Took too long finding your ID.
+	Stack: .............. [br](so... what now?) [br](i guess we all go home.)

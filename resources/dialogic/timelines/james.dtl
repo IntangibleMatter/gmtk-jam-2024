@@ -1,0 +1,26 @@
+if {q_comic} == 0:
+	Stack: Hey James!
+	James: Uhhh, what are you guys doing?
+	Stack: The most amazing thing we’ve ever done in our lives. You in?
+	James: What?
+	Stack: We’re going to see BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS and we need ten dollars.
+	James: I’m not just going to give you ten dollars. [br]I earned this money fair and square by unloading the dishwasher yesterday.
+	Stack: Please? You can join us! [br]Don’t you want to watch BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?
+	James: Hmmm… Okay fine, but only if you do something for me.
+	Stack: What is it?
+	James: I’ve been waiting for the newest issue of the GALAXY HIKE limited edition comic series, [br]but Muhammad bought the last one! [br]If you get it from him, I’ll give you the money.
+	Stack: Deal. He lives near the bookstore, right?
+	James: Yeah, that’s how he got it so fast.
+	Stack: Okay, see ya later!
+	set {q_comic} = 1
+elif {q_comic} == 1:
+	James: Hey guys! [br]Do you have the comic yet?
+	Stack: Nope. We got... sidetracked.
+	James: Alright, good luck.
+elif {q_comic} == 2:
+	Stack: Here's your nerd book.
+	James: Woah, you got it! Thanks!
+	Stack: You better have the cash.
+	James: Yup! Let's go to the movies?
+	Stack: Let's go!
+	set {q_money} = 2
