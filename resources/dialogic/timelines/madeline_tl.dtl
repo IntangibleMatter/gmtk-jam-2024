@@ -1,0 +1,15 @@
+if {q_berry} == 0:
+	Madeline: Hi there!
+	Stack: Hey! Do you wanna join our child tower and sneak into an adult film?
+	Madeline: That sounds fun, I'm just kinda hungry. There weren't any strawberries at the grocery store. Think you could find some for me?
+	Stack: We'll see what we can do!
+	set {q_berry} = 1
+elif {q_berry} == 1:
+	Madeline: Found any strawberries yet?
+	Stack: Nope, not yet. Sorry.
+	Madeline: That's okay. I'll survive a little while longer.
+elif {q_berry} == 2:
+	Stack: We found your strawberries!
+	Madeline: Thanks! Wow, these look great. I'm gonna climb in there and eat them while we walk around.
+	do Data.add_player_sprite(35.0)
+	do Data.remove_character("Madeline")

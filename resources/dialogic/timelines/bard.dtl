@@ -1,0 +1,17 @@
+if {q_bug} == 0:
+	Kiwi: Hi!
+	Stack: Hey there! Do you wanna join our tower and go see Cocaine Warriors?
+	Kiwi: Hmm... Sure! But... you have to find me a bug.
+	Stack: A... bug?
+	Kiwi: Yes! A cool bug. If you find me a cool bug I will join you.
+	Stack: ...Okay!
+	set {q_bug} = 1
+elif {q_bug} == 1:
+	Kiwi: Have you found a cool bug yet?
+	Stack: Nope, sorry. Still looking.
+	Kiwi: Okay! Take your time!
+elif {q_bug} == 2:
+	Stack: Hey, we found your bug.
+	Kiwi: Wow, that IS a cool bug! Thank you for showing me. I'll climb up now.
+	do Data.add_player_sprite(37.0)
+	do Data.remove_character("Kiwi")
