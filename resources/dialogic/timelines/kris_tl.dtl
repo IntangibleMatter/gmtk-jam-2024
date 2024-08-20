@@ -1,17 +1,13 @@
-Finn: Hey Kris, what's up?
-Kris: * ...
-Finn: ...Cool, cool
-Kris: * They ask you about a bug
-- I can find that!
-	set {q_bug} = 1
-- I found it!
-	set {q_bug} = 2
-- What?
-	set {q_bug} = 0
-Finn: q_bug is now {q_bug}
-if {q_bug} == 0:
-	Kris: * They ask you to find a bug
-elif {q_bug} == 1:
-	Kris: * They ask how finding the bug is going
-elif {q_bug} == 2:
-	Kris: * They thank you for finding the bug
+if {q_cookie} == 0:
+	Finn: Hey Kris, what's up?
+	Kris: * ...
+	Finn: ...Cool, cool
+	Kris: * (You sense that they'll join you if Susie does)
+elif {q_cookie} == 1:
+	Kris: * (You sense that they're still unwilling to join without Susie)
+elif {q_cookie} == 2:
+	Kris: * (They can tell that their friends are joining your stack)
+	Kris: * (They join the ever-increasing tower of children)
+	Kris: * (Your stack is mossed out)
+	do Data.remove_character("Kris")
+	do Data.add_player_sprite(25)

@@ -8,8 +8,15 @@ extends NPCBase
 		if not sprite:
 			return
 		sprite.texture = texture
+@export var texture_offset: Vector2 = Vector2.ZERO:
+	set(n_off):
+		texture_offset = n_off
+		if not sprite:
+			return
+		sprite.offset = texture_offset
 
 
 func _ready() -> void:
 	super()
 	sprite.texture = texture
+	sprite.offset = texture_offset

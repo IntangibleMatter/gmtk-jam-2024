@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6pd0ldg23qhk"]
+[gd_scene load_steps=9 format=3 uid="uid://b6pd0ldg23qhk"]
 
 [ext_resource type="PackedScene" uid="uid://crg8hgmsabwp3" path="res://obj/npc/npc_base.tscn" id="1_r4i8s"]
 [ext_resource type="Shader" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble.gdshader" id="2_fnsuv"]
@@ -25,6 +25,8 @@ shader_parameter/wobble_speed = 1.0
 shader_parameter/wobble_detail = 0.5
 shader_parameter/deformation_sampler = SubResource("NoiseTexture2D_kr7hw")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xycg6"]
+
 [node name="KidNPCBase" instance=ExtResource("1_r4i8s")]
 script = ExtResource("2_pvho5")
 kid_index = 0
@@ -36,7 +38,6 @@ bubble_marker_offset = -40.0
 position = Vector2(0, -45)
 
 [node name="Label" parent="LabelBase" index="0"]
-visible = false
 offset_left = -0.5
 offset_right = 0.5
 
@@ -54,3 +55,8 @@ vframes = 7
 
 [node name="BubbleMarker" parent="." index="4"]
 position = Vector2(0, -40)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+shape = SubResource("CircleShape2D_xycg6")

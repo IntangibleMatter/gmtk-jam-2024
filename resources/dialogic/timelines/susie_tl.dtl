@@ -1,10 +1,10 @@
 if {q_cookie} == 0:
-	Susie: Kris, where the FUCK are we?
+	Susie: Kris, where the [shake rate=10]HELL[/shake] are we?
 	Kris: * (They shrug.)
 	Finn: Hey, you look like the type of person who would want to watch [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS[/color].
 	Susie: ...You know, you're not wrong. But I'm not going anywhere without Lancer. If you get him to join you, sure, I'll go see COCAINE WARRIORS with you.
 elif {q_cookie} == 2:
-	Lancer: Hohoho! Susie! I'm up here!
+	Stack: Hohoho! Susie! I'm up here!
 	Susie: Woah, nice! Leave some space for me!
 	do Data.add_player_sprite(33.0)
 	do Data.remove_character("Susie")

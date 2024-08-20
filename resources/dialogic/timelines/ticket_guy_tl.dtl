@@ -36,5 +36,6 @@ elif {q_fakeid} == 2:
 	Stack: ...Seriously?
 	Ticket_Guy: Yeah. Sorry. Took too long finding your ID.
 	Stack: .............. [br](so... what now?) [br](i guess we all go home.)
+	do Data
 else:
 	Ticket_Guy: Still not happening, kid.

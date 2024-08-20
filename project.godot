@@ -57,7 +57,9 @@ directories/dch_directory={
 "Susie": "res://resources/dialogic/characters/Susie.dch",
 "Ticket_Guy": "res://resources/dialogic/characters/Ticket Guy.dch",
 "bloodbath": "res://resources/dialogic/characters/bloodbath.dch",
-"finn": "res://assets/graphics/finn.dch"
+"bookstore": "res://resources/dialogic/characters/bookstore.dch",
+"finn": "res://assets/graphics/finn.dch",
+"grocery": "res://resources/dialogic/characters/grocery.dch"
 }
 directories/dtl_directory={
 "Frisk": "res://resources/dialogic/timelines/Frisk.dtl",

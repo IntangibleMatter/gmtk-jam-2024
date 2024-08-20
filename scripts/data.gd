@@ -6,6 +6,10 @@ var data: Dictionary = {}
 
 var player_height: int = 1
 
+func go_to_end() -> void:
+	# TODO: MAKE THIS GO TO THE END SCREEEEEN
+	pass
+
 
 func get_player() -> Player:
 	return get_tree().current_scene.find_child("PlayerBase")

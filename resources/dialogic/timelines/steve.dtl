@@ -21,7 +21,7 @@ elif {q_basketball} == 2:
 	Paublo: Wow, there sure are a lot of you in there.
 	Finn: Our cause is just and noble. [br]Can we go talk to Steve now?
 	Jane: Fine. You've proven your worth. [br]STEVE!
-	Steve: Yeah? Sorry, I haven't been listening. 
+	Steve: Yeah? Sorry, I haven't been listening.
 	Finn: Hi Steve. Alex told us to give this to you.
 	Steve: A letter? What... Oh. Oh! Wow.
 	Finn: So?
@@ -30,10 +30,13 @@ elif {q_basketball} == 2:
 	Finn: Sure! You two have fun.
 	Paublo: Steve and ALex sitting in a tree!
 	Steve: Shut up, haha.
+	Jane: We never will :)
 	set {q_letter} = 1
 	do Data.remove_character("Steve")
 	Paublo: ...So what are you guys doing?
 	Finn: Sneaking in to see [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.[/color]
 	Jane: SICK! We're coming.
-	do Data.add_player_sprite(11.0, 21.0)
-	do Data.remove_character("Jane", "Paublo")
+	do Data.add_player_sprite(11.0)
+	do Data.add_player_sprite(21.0)
+	do Data.remove_character("Jane")
+	do Data.remove_character("Paublo")

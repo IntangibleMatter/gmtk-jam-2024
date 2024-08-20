@@ -16,6 +16,7 @@ if {q_money} == 0:
 	David: You know James?
 	Finn: He lives in that really big house, right?
 	David: Yeah, I heard he gets crazy allowance from his parents. We could ask him.
+	David: He usually hangs out a bit [color=blue]SOUTHEAST[/color] of here.
 	Finn: I guess we could give it a shot.
 	David: Okay, let me get on your shoulders.
 	set {q_money} = 1
