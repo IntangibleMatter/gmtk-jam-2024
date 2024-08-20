@@ -24,5 +24,5 @@ elif {q_comic} == 2:
 	James: Yup! Let's go to the movies?
 	Stack: Let's go!
 	set {q_money} = 2
-	do Data.add_player_sprite(21.0)
+	do Data.add_player_sprite(20.0)
 	do Data.remove_character("James")
