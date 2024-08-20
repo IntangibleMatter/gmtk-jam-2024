@@ -1,0 +1,23 @@
+if {q_dino} == 0:
+	Lilac: Hiii!
+	Finn: Hello!
+	Lilac: You're those weirdoes walking around in a trenchcoat, huh?
+	Finn: That's us! We're trying to trick the ticket guy into letting us see [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.[/color] Wanna come with?\
+	Lilac: Well, you've been offering everyone else favors, so I think I get one too. I want you to get me a dinosaur.
+	Finn: What, like a real one?
+	Lilac: No, from the store! Dinosaurs are dead, dummy.
+	Finn: I mean, no, 'cause birds are dinosaurs.
+	Lilac: Whatever. I want a dinosaur. From the toy store. Please and thank you.
+	Finn: Yes ma'am.
+	set {q_dino} = 1
+elif {q_dino} == 1:
+	Lilac: Do you have my dinosaur yet?
+	Finn: No, not yet.
+	Lilac: Well then what are you doing here? C'mon!
+elif {q_dino} == 2:
+	Finn: Your dinosaur, as requested.
+	Lilac: Awww, I love it!
+	Finn: Glad to hear it. Ready to hop on?
+	Lilac: Yep! Let's go!
+	do Data.add_player_sprite(24.0)
+	do Data.remove_character("Lilac")

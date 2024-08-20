@@ -1,0 +1,22 @@
+if {q_knife} == 0:
+	Sunny: Have you seen a knife?
+	Finn: ...What?
+	Sunny: A knife. I'm missing a knife. Have you seen it?
+	Finn: No???
+	Sunny: Well, I would like it back. My knife, that is.
+	Finn: ????Okay???
+	set {q_knife} = 1
+elif {q_knife} == 0:
+	Sunny: Have you found my knife yet?
+	Finn: Uh, no.
+	Sunny: Okay. Keep looking. It is grey and sharp and shiny.
+	Finn: Yeah, I know what a knife looks like, thanks.
+elif {q_knife} == 2:
+	Finn: Okay, here's your knife.
+	Sunny: Okay, thank you. It is very important to me.
+	Finn: Cool.
+	Sunny: ...
+	Finn: ...Do you... wanna an R rated movie with us?
+	Sunny: Sure.
+	do Data.add_player_sprite(32.0)
+	do Data.remove_character("Sunny")
