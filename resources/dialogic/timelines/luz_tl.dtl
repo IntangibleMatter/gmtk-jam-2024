@@ -1,0 +1,22 @@
+if {q_book} == 0:
+	Finn: Hey there!
+	Luz: Hi! Omigosh, I am in love with this whole situation.
+	Finn: Love it enough to join us? We're watching [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.[/color]
+	Luz: Oh yeah, I am IN.
+	Finn: ...What's the catch?
+	Luz: Catch? What catch?
+	Finn: There's always a catch.
+	Luz: Alright, you got me. There's a new book in the Azura series out, and I NEED it. But I don't have any cash on me, so...
+	Finn: ...So you want us to get it for you, yeah, I see the picture.
+	set {q_book} = 1
+elif {q_book} == 1:
+	Luz: Please tell me you have it.
+	Finn: Nope, sorry.
+	Luz: Nooooo I am dyinggg without it...
+elif {q_book} == 2:
+	Finn: We've got it!
+	Luz: FINALLY! Oh my gosh, thank you sooo much!
+	Finn: No problem. You gonna watch COCAINE WARRIORS with us?
+	Luz: Yeah, duh! I'm gonna find a spot up there and read while we walk around though.
+	do Data.add_player_sprite("39")
+	do Data.remove_character("Luz")

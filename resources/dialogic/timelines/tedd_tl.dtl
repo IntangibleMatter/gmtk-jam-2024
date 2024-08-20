@@ -1,0 +1,23 @@
+if {q_cat} == 0:
+	Tedd: Have you seen my cat?
+	Finn: Uh, maybe? I don't know. Look, do you wanna see [color=red]BLOODBATH MURD--[/color]
+	Tedd: I'll do ANYTHING if it means you'll find my cat.
+	Finn: Okay, what's it look like?
+	Tedd: His name is Smoggy and he's just the sweetest little baby boy on the whole planet.
+	Finn: That's not really a description.
+	Tedd: He's the cutest cat in the world, that's all the description you need.
+	Finn: Alright, we'll keep an eye out.
+	set {q_cat} = 1
+elif {q_cat} == 1:
+	Tedd: Have you found him yet?
+	Finn: No, sorry. Still looking.
+	Tedd: Oh, my boy... my sweet baby boy...
+elif {q_cat} == 2:
+	Finn: Is this your cat?
+	Tedd: SMOGGY! MY SON! LIGHT OF MY LIFE MY ITTY BITTY PRINCE OF MY HEART!
+	Finn: He's kinda heavy, actually.
+	Tedd: He is the perfect size and shape and everything and I love him.
+	Finn: Sure. Do you wanna see an R rated movie with us?
+	Tedd: Anything, so long as it's with My Boy.
+	do Data.add_player_sprite(23.0)
+	do Data.remove_character("Tedd")
