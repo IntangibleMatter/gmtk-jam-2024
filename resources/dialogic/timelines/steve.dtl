@@ -30,5 +30,5 @@ elif {q_basketball} == 2:
 	Stack: Sure! You two have fun.
 	Paublo: Steve and ALex sitting in a tree!
 	Steve: Shut up, haha.
-	set {q_letter} = 2
+	set {q_letter} = 1
 	do Data.remove_character("Steve")
