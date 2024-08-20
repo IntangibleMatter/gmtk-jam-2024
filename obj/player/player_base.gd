@@ -1,9 +1,9 @@
 class_name Player
 extends CharacterBody2D
 
-const ACCELERATION: float = 320
-const MAX_SPEED: float = 80
-const FRICTION: float = 120
+const ACCELERATION: float = 300
+const MAX_SPEED: float = 120
+const FRICTION: float = 180
 
 var latest_kid: int = 0
 var kid_count: int = 1
