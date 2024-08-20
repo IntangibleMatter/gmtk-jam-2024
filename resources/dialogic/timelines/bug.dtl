@@ -1,0 +1,10 @@
+if {q_bug} == 0:
+	Finn: Wow! What a cool bug!
+	Stack: Let's leave it there for now, but maybe someone will want it later.
+elif {q_bug} == 1:
+	Finn: There's a bug, like Kiwi wanted! Let's grab it!
+	set {q_bug} = 2
+	do Data.remove_character("bug")
+elif {q_bug} == 2:
+	Finn: Oh no, a bug!
+	Finn: (And not the kind that was sitting here earlier)
