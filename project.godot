@@ -67,9 +67,12 @@ directories/dtl_directory={
 "david_tl": "res://resources/dialogic/timelines/david_tl.dtl",
 "james": "res://resources/dialogic/timelines/james.dtl",
 "kris_tl": "res://resources/dialogic/timelines/kris_tl.dtl",
+"lancer_tl": "res://resources/dialogic/timelines/lancer_tl.dtl",
+"madeline_tl": "res://resources/dialogic/timelines/madeline_tl.dtl",
 "miriam_tl": "res://resources/dialogic/timelines/miriam_tl.dtl",
 "muhammad_tl": "res://resources/dialogic/timelines/muhammad_tl.dtl",
 "steve": "res://resources/dialogic/timelines/steve.dtl",
+"susie_tl": "res://resources/dialogic/timelines/susie_tl.dtl",
 "test_timeline": "res://resources/dialogic/timelines/test_timeline.dtl",
 "theatre": "res://resources/dialogic/timelines/timeline.dtl",
 "ticket_guy_tl": "res://resources/dialogic/timelines/ticket_guy_tl.dtl"
@@ -93,10 +96,12 @@ animations/join_default_wait=true
 text/autopauses={}
 variables={
 "q_basketball": 0,
+"q_berry": 0,
 "q_broom": 0,
 "q_bug": 0,
 "q_choco": 0,
 "q_comic": 0,
+"q_cookie": 0,
 "q_fakeid": 0,
 "q_figure": 0,
 "q_letter": 0,
