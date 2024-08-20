@@ -1,16 +1,16 @@
 if {q_broom} == 0:
-	Stack: Hi there! DO you wanna climb on our shoulders and see an R rated film with us?
+	Finn: Hi there! DO you wanna climb on our shoulders and see an R rated film with us?
 	Miriam: Hm. Only if you find my broom.
-	Stack: You want us to find you a broom?
+	Finn: You want us to find you a broom?
 	Miriam: Not A broom, MY broom. I'm a witch and I need it back.
-	Stack: Ooookay? We'll find your broom.
+	Finn: Ooookay? We'll find your broom.
 	set {q_broom} = 1
 elif {q_broom} == 1:
 	Miriam: Did you find it?
-	Stack: Not yet.
+	Finn: Not yet.
 	Miriam: Hm.
 elif {q_broom} == 2:
-	Stack: Hey, we found your broom.
+	Finn: Hey, we found your broom.
 	Miriam: Thank you. I'll climb up now.
 	do Data.add_player_sprite(36.0)
 	do Data.remove_character("Miriam")

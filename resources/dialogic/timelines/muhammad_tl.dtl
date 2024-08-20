@@ -1,28 +1,28 @@
 if {q_figure} == 0:
-	Stack: Hey, Muhammad.
+	Finn: Hey, Muhammad.
 	Muhammad: Hi. Woah, what are you guys doing?
-	Stack: We're trying to trick the ticket guy into letting us see BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.
+	Finn: We're trying to trick the ticket guy into letting us see [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?[/color]
 	Muhammad: Wow, my parents would never let me see that, can I come?
-	Stack: Not so fast, bucko.
+	Finn: Not so fast, bucko.
 	Muhammad: “Bucko”?
-	Stack: We need money for the ticket from James, [br]but he won’t give it to us unless we give him your space comic book.
+	Finn: We need money for the ticket from James, [br]but he won’t give it to us unless we give him your space comic book.
 	Muhammad: GALAXY HIKE Issue #112? No way, I saved up for four months to pay for this. [br]James gets money from his parents like every day, he can probably afford like 20 movie tickets.
-	Stack: Okay, well that’s what he said. Is there anything you want for the comic?
+	Finn: Okay, well that’s what he said. Is there anything you want for the comic?
 	Muhammad: …Maybe. [br]You know Alex? Red hair, always hanging out on the playground?
-	Stack: Yeah, why?
+	Finn: Yeah, why?
 	Muhammad: Well there’s a GALAXY HIKE action figure I've always wanted but never had enough money for. [br]Alex has one, if you can get it from them, then maybe I'll give the comic book to James.
-	Stack: And you'll see COCAINE WARRIORS with us?
+	Finn: And you'll see COCAINE WARRIORS with us?
 	Muhammad: Definitely.
-	Stack: Alright, we're on it.
+	Finn: Alright, we're on it.
 	set {q_figure} = 1
 elif {q_figure} == 1:
 	Muhammad: Did you get Spork yet?
-	Stack: Spork is still in custody, sorry.
+	Finn: Spork is still in custody, sorry.
 	Muhammad: Alright, see you later.
 elif {q_figure} == 2:
 	Stack: We return with Spork!
 	Muhammad: Wow, you actually got him! Thank you!
-	Stack: Ah ah ah! Hand over the comic book!
+	Finn: Ah ah ah! Hand over the comic book!
 	Muhammad: Fine... I'll climb up and we can go find James.
 	set {q_comic} = 2
 	do Data.add_player_sprite(16)

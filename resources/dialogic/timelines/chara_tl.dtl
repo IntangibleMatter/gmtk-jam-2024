@@ -1,18 +1,18 @@
 if {q_choco} == 0:
 	Chara: Chocolate.
-	Stack: What?
+	Finn: What?
 	Chara: You are doing favors in exchange for adding more onto your child tower, are you not?
-	Stack: ...Yeah?
+	Finn: ...Yeah?
 	Chara: I want chocolate. From the grocery store. Dark please, not any of that pale imitation.
-	Stack: ...Okay?
+	Finn: ...Okay?
 	set {q_choco} = 1
 elif {q_choco} == 1:
 	Chara: Do you have my chocolate yet?
-	Stack: Uh, no.
+	Finn: Uh, no.
 	Chara: Then why are you here?
-	Stack: Umm...
+	Finn: Umm...
 elif {q_choco} == 2:
-	Stack: Here's your chocolate.
+	Finn: Here's your chocolate.
 	Chara: Hm. This is adequate. Thank you. I will now climb onto this increasing tower of children.
 	do Data.add_player_sprite(27.0)
 	do Data.remove_character("Chara")

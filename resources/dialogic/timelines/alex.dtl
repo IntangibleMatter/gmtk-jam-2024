@@ -1,30 +1,30 @@
 if {q_letter} == 0:
 	Alex: Hey guys!
-	Stack: We need your GALAXY HIKE action figure.
+	Finn: We need your GALAXY HIKE action figure.
 	Alex: You need Spork? Why?
-	Stack: Long story, but it's for a good cause. [br]We're trying to get money to go see COCAINE WARRIORS.
-	Alex: I'm not just going to give you my expensive action figure.
-	Stack: Look, let's just skip to where you tell us what you want for it.
+	Finn: Long story, but it's for a good cause. [br]We're trying to get money to go see COCAINE WARRIORS.
+	Finn: I'm not just going to give you my expensive action figure.
+	Finn: Look, let's just skip to where you tell us what you want for it.
 	Alex: What?
-	Stack: Everyone wants something, so what do you want?
+	Finn: Everyone wants something, so what do you want?
 	Alex: …Alright, fine. I need you to give this to Steve.
-	Stack: A letter?
+	Finn: A letter?
 	Alex: Okay, don't make fun of me… but I like Steve.
-	Stack: Like… “Like” Like them?
+	Finn: Like… “Like” Like them?
 	Alex: Yes! Like like them! [br]And I'm too scared to say it to their face, so I need you to give this letter to them. [br]Okay? And then I'll give you the action figure.\
 Stack\: Pff, that's easy. We can do that.
 	Alex: Thanks. They hang out with their friends by the trees at the edge of town. See ya!
 	set {q_letter} = 1
 elif {q_letter} == 1:
 	Alex: Hey guys! Did you... give them the letter yet?
-	Stack: Not yet, sorry.
+	Finn: Not yet, sorry.
 	Alex: Alright, well tell me when you do.
 elif {q_letter} == 2:
-	Stack: We've delivered the letter.
+	Finn: We've delivered the letter.
 	Alex: You did? ...What did they say?
-	Stack: They said they want to meet you at the toy store to look at toys together.
+	Finn: They said they want to meet you at the toy store to look at toys together.
 	Alex: Wow... a date to the toy store...
-	Stack: Yeah, yeah, very romantic. The action figure?
+	Finn: Yeah, yeah, very romantic. The action figure?
 	Alex: Oh! Yeah, here you go. [br]Have fun watching COCAINE WARRIORS!
 	set {q_figure} = 2
 	do Data.remove_character("Alex")

@@ -1,15 +1,15 @@
 if {q_cookie} == 0:
 	Lancer: Hohoho! Are you clowns doing the trenchcoat trick?
-	Stack: Heck yeah! You wanna join us? We're gonna watch BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.
+	Finn: Heck yeah! You wanna join us? We're gonna watch BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.
 	Lancer: That sounds super cool. But! I wanna get something for my friend Susie. A cookie! To share! Because she's having a rough time.
-	Stack: Aww, that's nice. We'll grab one from the grocery store.
+	Finn: Aww, that's nice. We'll grab one from the grocery store.
 	Lancer: Hoho, thanks! You're as fresh as toothpaste!
 	set {q_cookie} = 1
 elif {q_cookie} == 1:
 	Lancer: Did you get the cookie yet?
-	Stack: Not yet.
+	Finn: Not yet.
 elif {q_cookie} == 2:
-	Stack: Hey, we got your cookie.
+	Finn: Hey, we got your cookie.
 	Lancer: Wow, thanks! You're quite the stack of peaches. Hey, Susie!
 	Susie: Yeah, what's up?
 	Lancer: Here! A cookie, for us to share.

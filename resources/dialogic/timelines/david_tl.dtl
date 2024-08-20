@@ -1,7 +1,8 @@
-if {q_money} >= 0:
+if {q_money} == 0:
 	Finn: Hey David, can I borrow your trenchcoat?
 	David: Sure, why?
-	Finn: I wanna see BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS, but the ticket guy says i’m too young. [br]So I'm gonna pretend to be an adult.
+	Finn: I wanna see [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?[/color]\
+, but the ticket guy says i’m too young. [br]So I'm gonna pretend to be an adult.
 	David: Like in the movies?
 	Finn: Yeah!
 	David: Has that ever actually worked?

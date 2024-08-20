@@ -1,14 +1,14 @@
 if {q_basketball} == 0:
 	Jane: HEY. Who are you?
-	Stack: Well there's a few of us in here, but we're here to talk to Steve.
+	Finn: Well there's a few of us in here, but we're here to talk to Steve.
 	Paublo: What about?
-	Stack: Well, Alex asked us to deliver this letter to them.
+	Finn: Well, Alex asked us to deliver this letter to them.
 	Jane: What's that, a love letter?
-	Stack: Yeah, actually.
+	Finn: Yeah, actually.
 	Paublo: ...Look. Our pal Steve's been having a rough day. [br]We don't need some joker pulling a prank on them.
-	Stack: It's not a prank, we swear!
+	Finn: It's not a prank, we swear!
 	Jane: Oh yeah? Prove you're being legit.
-	Stack: How?
+	Finn: How?
 	Jane: Our basketball is stuck in that tree. [br]If you can get it down for us, we'll let you talk to Steve.
 	Stack: Fine.
 	set {q_basketball} = 1
@@ -17,18 +17,23 @@ elif {q_basketball} == 1:
 	Stack: Nope. We need to be taller.
 	Jane: Then scram!
 elif {q_basketball} == 2:
-	Stack: Here you go.
+	Finn: Here you go.
 	Paublo: Wow, there sure are a lot of you in there.
-	Stack: Our cause is just and noble. [br]Can we go talk to Steve now?
-	Jane: Fine. You've proven your worth. [br]STEVE! Get over here!
-	Steve: Hey guys. What's up?
-	Stack: Hi Steve. Alex told us to give this to you.
+	Finn: Our cause is just and noble. [br]Can we go talk to Steve now?
+	Jane: Fine. You've proven your worth. [br]STEVE!
+	Steve: Yeah? Sorry, I haven't been listening. 
+	Finn: Hi Steve. Alex told us to give this to you.
 	Steve: A letter? What... Oh. Oh! Wow.
-	Stack: So?
+	Finn: So?
 	Steve: Wow. This is great. I had no idea they... wow. [br]Can you go tell Alex to meet me at the toy store? So we can look at toys together.
 	Jane: Oooooooo!
-	Stack: Sure! You two have fun.
+	Finn: Sure! You two have fun.
 	Paublo: Steve and ALex sitting in a tree!
 	Steve: Shut up, haha.
 	set {q_letter} = 1
 	do Data.remove_character("Steve")
+	Paublo: ...So what are you guys doing?
+	Finn: Sneaking in to see [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.[/color]
+	Jane: SICK! We're coming.
+	do Data.add_player_sprite(11.0, 21.0)
+	do Data.remove_character("Jane", "Paublo")
