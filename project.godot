@@ -38,6 +38,7 @@ directories/dch_directory={
 "Stack": "res://resources/dialogic/characters/Stack.dch",
 "Steve": "res://resources/dialogic/characters/Steve.dch",
 "Ticket_Guy": "res://resources/dialogic/characters/Ticket_Guy.dch",
+"bloodbath": "res://resources/dialogic/characters/bloodbath.dch",
 "finn": "res://assets/graphics/finn.dch"
 }
 directories/dtl_directory={
@@ -97,7 +98,7 @@ NPC=""
 
 [gui]
 
-theme/custom_font="res://assets/fonts/exam_sans.ttf"
+theme/custom_font="res://assets/fonts/Arcon-Regular.ttf"
 
 [input]
 

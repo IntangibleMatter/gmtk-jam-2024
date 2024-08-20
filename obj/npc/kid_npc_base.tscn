@@ -29,13 +29,14 @@ shader_parameter/deformation_sampler = SubResource("NoiseTexture2D_kr7hw")
 script = ExtResource("2_pvho5")
 kid_index = 0
 flipped = false
-label_offset = -42.0
+label_offset = -45.0
 bubble_marker_offset = -40.0
 
 [node name="LabelBase" parent="." index="2"]
-position = Vector2(0, -42)
+position = Vector2(0, -45)
 
 [node name="Label" parent="LabelBase" index="0"]
+visible = false
 offset_left = -0.5
 offset_right = 0.5
 

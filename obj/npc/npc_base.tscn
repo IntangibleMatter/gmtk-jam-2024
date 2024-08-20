@@ -23,7 +23,6 @@ shape = SubResource("CircleShape2D_3sxpi")
 position = Vector2(0, -40)
 
 [node name="Label" type="Label" parent="LabelBase" groups=["NPC"]]
-visible = false
 z_index = 128
 offset_left = -8.0
 offset_top = -23.0

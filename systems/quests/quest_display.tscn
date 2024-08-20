@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuveoy66ioroq"]
+[gd_scene load_steps=10 format=3 uid="uid://cuveoy66ioroq"]
 
 [ext_resource type="Script" path="res://systems/quests/quest_system.gd" id="1_2d46c"]
 [ext_resource type="AudioStream" uid="uid://c6yxuc1u8gu0r" path="res://assets/music/storebell.wav" id="3_c3kr2"]
@@ -185,6 +185,9 @@ _data = {
 "store_fade": SubResource("Animation_5lyxi")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_20v1l"]
+shadow_color = Color(0, 0, 0, 0.529412)
+
 [node name="QuestDisplay" type="CanvasLayer"]
 script = ExtResource("1_2d46c")
 
@@ -228,6 +231,13 @@ position = Vector2(24, -16)
 texture = ExtResource("4_xjhtd")
 hframes = 2
 
+[node name="Toast2" type="Sprite2D" parent="Toast"]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+show_behind_parent = true
+position = Vector2(1, 1)
+texture = ExtResource("4_xjhtd")
+hframes = 2
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_nu4tt")
@@ -239,6 +249,7 @@ offset_left = 40.0
 offset_right = 286.0
 offset_bottom = 26.0
 text = "(Press TAB to view tasks)"
+label_settings = SubResource("LabelSettings_20v1l")
 visible_characters = 0
 visible_ratio = 0.0
 
