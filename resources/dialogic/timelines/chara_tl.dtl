@@ -10,4 +10,9 @@ elif {q_choco} == 1:
 	Chara: Do you have my chocolate yet?
 	Stack: Uh, no.
 	Chara: Then why are you here?
-elif :
+	Stack: Umm...
+elif {q_choco} == 2:
+	Stack: Here's your chocolate.
+	Chara: Hm. This is adequate. Thank you. I will now climb onto this increasing tower of children.
+	do Data.add_player_sprite(27.0)
+	do Data.remove_character("Chara")
