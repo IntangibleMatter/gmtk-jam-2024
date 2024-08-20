@@ -30,7 +30,6 @@ directories/dch_directory={
 "Alex": "res://resources/dialogic/characters/Alex.dch",
 "Anne": "res://resources/dialogic/characters/Anne.dch",
 "Basketball": "res://resources/dialogic/characters/Basketball.dch",
-"Broom": "res://resources/dialogic/characters/brrom.dch",
 "Calvin": "res://resources/dialogic/characters/Calvin.dch",
 "Chara": "res://resources/dialogic/characters/Chara.dch",
 "David": "res://resources/dialogic/characters/David.dch",
@@ -60,9 +59,11 @@ directories/dch_directory={
 "Ticket_Guy": "res://resources/dialogic/characters/Ticket Guy.dch",
 "bloodbath": "res://resources/dialogic/characters/bloodbath.dch",
 "bookstore": "res://resources/dialogic/characters/bookstore.dch",
+"brrom": "res://resources/dialogic/characters/brrom.dch",
 "bug": "res://resources/dialogic/characters/bug.dch",
 "finn": "res://assets/graphics/finn.dch",
-"grocery": "res://resources/dialogic/characters/grocery.dch"
+"grocery": "res://resources/dialogic/characters/grocery.dch",
+"mystery": "res://resources/dialogic/characters/mystery.dch"
 }
 directories/dtl_directory={
 "Frisk": "res://resources/dialogic/timelines/Frisk.dtl",
@@ -74,6 +75,7 @@ directories/dtl_directory={
 "bug": "res://resources/dialogic/timelines/bug.dtl",
 "chara_tl": "res://resources/dialogic/timelines/chara_tl.dtl",
 "david_tl": "res://resources/dialogic/timelines/david_tl.dtl",
+"fakeid_tl": "res://resources/dialogic/timelines/fakeid_tl.dtl",
 "james": "res://resources/dialogic/timelines/james.dtl",
 "kris_tl": "res://resources/dialogic/timelines/kris_tl.dtl",
 "lancer_tl": "res://resources/dialogic/timelines/lancer_tl.dtl",

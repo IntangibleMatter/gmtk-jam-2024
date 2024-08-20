@@ -1,0 +1,12 @@
+if {q_fakeid} == 0:
+	mystery: It's not time yet.
+elif {q_fakeid} == 1:
+	mystery: So you've finally arrived.
+	Finn: ...Yeah, we're here for the--
+	mystery: --the fake ID, yes, I know. Your arrival has been foretold in the stars. Here, take this... Arthur of the toothpaste factory.
+	Finn: Woah, this is an ID for Arthur Hidgens. How did you know that was going to be our fake name?
+	mystery: That has also been foretold. Go now. To your destiny.
+	set {q_fakeid} = 2
+elif {q_fakeid} == 2:
+	Finn: Who are you?
+	mystery: My name matters not. The only thing that matters is that you go forward to your destiny. 

@@ -1,0 +1,20 @@
+if {q_shoe} == 0:
+	Finn: Psst. Would you  like to join our cause?
+	Anne: The cause of...?
+	Finn: Sneaking into an R rated film.
+	Anne: Hmm... A noble cause. And I would come, but I'm missing a shoe.
+	Finn: A shoe?
+	Anne: Yeah, see? The darn thing just keeps disappearing. If you can find it, I'm with you.
+	Finn: We're on it.
+	set {q_shoe} = 1
+elif {q_shoe} == 1:
+	Anne: Found it yet?
+	Finn: Nope.
+	Anne: Dang.
+elif {q_shoe} == 2:
+	Finn: Found it!
+	Anne: Finally! Thank you SO much, I've been looking everywhere for this.
+	Finn: No problem. Ready to hop on?
+	Anne: Heck yeah.
+	do Data.add_player_sprite(38.0)
+	do Data.remove_character("Anne")
