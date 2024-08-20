@@ -59,8 +59,8 @@ func _ready() -> void:
 					##set_trenchcoat_target(trench_targ)
 				#KEY_PAGEUP:
 					#change_trenchcoat_size(1)
-					##set_trenchcoat_target(trench_targ)
-					##trenchcoat_nodes.resize(trenchcoat_node_count)
+					#set_trenchcoat_target(trench_targ)
+					#trenchcoat_nodes.resize(trenchcoat_node_count)
 				#KEY_COMMA:
 					#set_trenchcoat_target(-1)
 				#KEY_PERIOD:

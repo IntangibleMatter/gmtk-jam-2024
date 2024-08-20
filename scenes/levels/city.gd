@@ -75,8 +75,10 @@ func update_target_char(char: DialogicCharacter) -> void:
 	var cname: String = char.display_name
 	var target_char: Node2D
 	var target: Vector2
-	if cname in ["Finn", "Player", "Stack"]:
+	if cname in ["Player", "Stack"]:
 		target_char = player
+	elif cname == "Finn":
+		target_char = player.sprite_single
 	else:
 		target_char = interactables.get_node_or_null(cname)
 	

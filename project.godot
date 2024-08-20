@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="GMTK Jam 2024"
+config/name="(n+1) Kids in a Trenchcoats"
 run/main_scene="res://scenes/main_menu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="intangiblematter_capntoad_gmtk_2024"
@@ -30,6 +30,7 @@ directories/dch_directory={
 "Alex": "res://resources/dialogic/characters/Alex.dch",
 "Anne": "res://resources/dialogic/characters/Anne.dch",
 "Basketball": "res://resources/dialogic/characters/Basketball.dch",
+"Broom": "res://resources/dialogic/characters/Broom.dch",
 "Calvin": "res://resources/dialogic/characters/Calvin.dch",
 "Chara": "res://resources/dialogic/characters/Chara.dch",
 "David": "res://resources/dialogic/characters/David.dch",
@@ -60,11 +61,10 @@ directories/dch_directory={
 "Ticket_Guy": "res://resources/dialogic/characters/Ticket Guy.dch",
 "bloodbath": "res://resources/dialogic/characters/bloodbath.dch",
 "bookstore": "res://resources/dialogic/characters/bookstore.dch",
-"brrom": "res://resources/dialogic/characters/brrom.dch",
-"bug": "res://resources/dialogic/characters/bug.dch",
+"bug": "res://resources/dialogic/characters/A Bug.dch",
 "finn": "res://assets/graphics/finn.dch",
 "grocery": "res://resources/dialogic/characters/grocery.dch",
-"mystery": "res://resources/dialogic/characters/mystery.dch"
+"mystery": "res://resources/dialogic/characters/Mysterious Roof Person.dch"
 }
 directories/dtl_directory={
 "Frisk": "res://resources/dialogic/timelines/Frisk.dtl",
@@ -73,10 +73,13 @@ directories/dtl_directory={
 "anne_tl": "res://resources/dialogic/timelines/anne_tl.dtl",
 "bard": "res://resources/dialogic/timelines/bard.dtl",
 "basketball": "res://resources/dialogic/timelines/basketball.dtl",
+"book": "res://resources/dialogic/timelines/book.dtl",
+"broom": "res://resources/dialogic/timelines/broom.dtl",
 "bug": "res://resources/dialogic/timelines/bug.dtl",
 "chara_tl": "res://resources/dialogic/timelines/chara_tl.dtl",
 "david_tl": "res://resources/dialogic/timelines/david_tl.dtl",
 "fakeid_tl": "res://resources/dialogic/timelines/fakeid_tl.dtl",
+"grocer": "res://resources/dialogic/timelines/grocer.dtl",
 "james": "res://resources/dialogic/timelines/james.dtl",
 "kris_tl": "res://resources/dialogic/timelines/kris_tl.dtl",
 "lancer_tl": "res://resources/dialogic/timelines/lancer_tl.dtl",
@@ -92,7 +95,8 @@ directories/dtl_directory={
 "tedd_tl": "res://resources/dialogic/timelines/tedd_tl.dtl",
 "test_timeline": "res://resources/dialogic/timelines/test_timeline.dtl",
 "theatre": "res://resources/dialogic/timelines/timeline.dtl",
-"ticket_guy_tl": "res://resources/dialogic/timelines/ticket_guy_tl.dtl"
+"ticket_guy_tl": "res://resources/dialogic/timelines/ticket_guy_tl.dtl",
+"toy": "res://resources/dialogic/timelines/toy.dtl"
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -126,12 +130,11 @@ variables={
 "q_dino": 0,
 "q_fakeid": 0,
 "q_figure": 0,
-"q_knife": 0,
 "q_letter": 0,
 "q_money": 0,
 "q_shoe": 0,
 "stacksize": 0,
-"talked_to_theatre": 0
+"talked_to_theatre": false
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://resources/dialogic/style/bubble.tres"]

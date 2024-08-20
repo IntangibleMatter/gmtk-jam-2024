@@ -27,11 +27,17 @@ shader_parameter/deformation_sampler = SubResource("NoiseTexture2D_kr7hw")
 [node name="PlaceableNPCBase" instance=ExtResource("1_pxd0y")]
 script = ExtResource("2_lgxne")
 texture = null
+texture_offset = Vector2(0, 0)
+
+[node name="LabelBase" parent="." index="2"]
+position = Vector2(0, -32)
 
 [node name="Label" parent="LabelBase" index="0"]
-visible = false
 offset_left = -0.5
 offset_right = 0.5
 
 [node name="ColorRect" parent="LabelBase/Label" index="0"]
 material = SubResource("ShaderMaterial_u4oyy")
+
+[node name="BubbleMarker" parent="." index="4"]
+position = Vector2(0, -32)

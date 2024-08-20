@@ -15,7 +15,7 @@ signal dialogue_started(dialogue_node: Node)
 		label.size.x = 0
 		await get_tree().process_frame
 		label.position.x = -label.size.x/2
-@export_range(-64, 0, 1) var label_offset: float = -32:
+@export_range(-512, 0, 1) var label_offset: float = -32:
 	set(n_label_offset):
 		label_offset = n_label_offset
 		if not label:

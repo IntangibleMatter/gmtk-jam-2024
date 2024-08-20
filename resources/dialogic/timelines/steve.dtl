@@ -1,3 +1,5 @@
+if {q_letter} == 0:
+	Finn: (...they look busy)
 if {q_basketball} == 0:
 	Jane: HEY. Who are you?
 	Finn: Well there's a few of us in here, but we're here to talk to Steve.

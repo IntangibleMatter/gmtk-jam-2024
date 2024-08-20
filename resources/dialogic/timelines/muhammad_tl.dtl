@@ -1,3 +1,6 @@
+if {q_money} == 0:
+	Finn: Hey
+	Muhammad: Hey
 if {q_figure} == 0:
 	Finn: Hey, Muhammad.
 	Muhammad: Hi. Woah, what are you guys doing?

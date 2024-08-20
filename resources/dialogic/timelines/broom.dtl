@@ -1,0 +1,6 @@
+if {q_broom} == 0:
+	Finn: Huh, wonder why there's a broom here.
+elif {q_broom} == 1:
+	Finn: Oh! Here's the broom Miriam wanted!
+	do Data.remove_character("Broom")
+	set {q_broom} = 2
