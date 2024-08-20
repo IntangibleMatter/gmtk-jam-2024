@@ -100,7 +100,8 @@ variables={
 "q_fakeid": 0,
 "q_figure": 0,
 "q_letter": 0,
-"q_money": 0
+"q_money": 0,
+"stacksize": 0
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://resources/dialogic/style/bubble.tres"]
