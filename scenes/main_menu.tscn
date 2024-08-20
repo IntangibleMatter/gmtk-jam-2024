@@ -1,0 +1,139 @@
+[gd_scene load_steps=13 format=3 uid="uid://yo8evmgmefvp"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_5k6wu"]
+[ext_resource type="Texture2D" uid="uid://ccipp1xqstkwf" path="res://assets/graphics/titlescreen_kids.png" id="1_jh4kx"]
+[ext_resource type="Texture2D" uid="uid://burhx72lyvs2m" path="res://assets/graphics/trenchcoat_middle.png" id="3_gbkpg"]
+[ext_resource type="Texture2D" uid="uid://bhhtxl1dso8vr" path="res://assets/graphics/chris_walkcycle.png" id="3_scj60"]
+[ext_resource type="Texture2D" uid="uid://cqpmm2yp3ev8n" path="res://assets/graphics/trenchcoat_top.png" id="4_x8fp1"]
+[ext_resource type="Texture2D" uid="uid://d3rr2mv0dfc1c" path="res://assets/graphics/trenchcoat_collar.png" id="5_744t1"]
+[ext_resource type="Texture2D" uid="uid://7i6so0n0aepq" path="res://assets/graphics/trenchcoat_hat.png" id="6_5wpnh"]
+[ext_resource type="FontFile" uid="uid://cqdbp47rr0f1c" path="res://assets/fonts/exam_sans.ttf" id="8_v86qs"]
+[ext_resource type="FontFile" uid="uid://7kn5k62gpgtn" path="res://assets/fonts/exam_sans_bold.ttf" id="9_lksay"]
+[ext_resource type="StyleBox" uid="uid://wi4wu6glrd0q" path="res://resources/basebutton.tres" id="10_4delt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qglnn"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.06, 0.671, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_size = 4
+shadow_offset = Vector2(6, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hugqh"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.06, 0.671, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_offset = Vector2(4, 4)
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_5k6wu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -26.0
+offset_right = 480.0
+offset_bottom = 334.0
+texture = ExtResource("1_jh4kx")
+stretch_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(60, 36)
+texture = ExtResource("3_scj60")
+offset = Vector2(0, -16)
+flip_h = true
+hframes = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+z_index = 4
+position = Vector2(-15, -11)
+texture = ExtResource("4_x8fp1")
+centered = false
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+show_behind_parent = true
+position = Vector2(-19, -25)
+texture = ExtResource("5_744t1")
+centered = false
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-23, -43)
+texture = ExtResource("6_5wpnh")
+centered = false
+flip_h = true
+
+[node name="Line2D" type="Line2D" parent="."]
+texture_repeat = 2
+position = Vector2(64, 64)
+width = 29.0
+texture = ExtResource("3_gbkpg")
+texture_mode = 1
+end_cap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.215
+offset_left = -392.0
+offset_bottom = 3.94998
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+theme_override_fonts/normal_font = ExtResource("8_v86qs")
+theme_override_fonts/bold_font = ExtResource("9_lksay")
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+bbcode_enabled = true
+text = "[center][outline_size=4](n+1) Kids
+[font_size=32]IN A TRENCHCOAT"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_v86qs")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = ExtResource("10_4delt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qglnn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hugqh")
+theme_override_styles/normal = ExtResource("10_4delt")
+text = "Play!"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

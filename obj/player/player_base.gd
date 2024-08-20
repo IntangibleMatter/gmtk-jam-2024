@@ -1,9 +1,9 @@
 class_name Player
 extends CharacterBody2D
 
-const ACCELERATION: float = 300
-const MAX_SPEED: float = 120
-const FRICTION: float = 180
+const ACCELERATION: float = 450
+const MAX_SPEED: float = 200
+const FRICTION: float = 600
 
 var latest_kid: int = 0
 var kid_count: int = 1
@@ -49,24 +49,24 @@ func _ready() -> void:
 		head.hide()
 	else:
 		head.show()
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		if event.pressed:
-			match event.keycode:
-				KEY_PAGEDOWN:
-					change_trenchcoat_size(-1)
-					#set_trenchcoat_target(trench_targ)
-				KEY_PAGEUP:
-					change_trenchcoat_size(1)
-					#set_trenchcoat_target(trench_targ)
-					#trenchcoat_nodes.resize(trenchcoat_node_count)
-				KEY_COMMA:
-					set_trenchcoat_target(-1)
-				KEY_PERIOD:
-					set_trenchcoat_target(1)
-				KEY_0:
-					set_trenchcoat_target(0)
+#
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event is InputEventKey:
+		#if event.pressed:
+			#match event.keycode:
+				#KEY_PAGEDOWN:
+					#change_trenchcoat_size(-1)
+					##set_trenchcoat_target(trench_targ)
+				#KEY_PAGEUP:
+					#change_trenchcoat_size(1)
+					##set_trenchcoat_target(trench_targ)
+					##trenchcoat_nodes.resize(trenchcoat_node_count)
+				#KEY_COMMA:
+					#set_trenchcoat_target(-1)
+				#KEY_PERIOD:
+					#set_trenchcoat_target(1)
+				#KEY_0:
+					#set_trenchcoat_target(0)
 					
 
 func get_nearest_npc() -> NPCBase:

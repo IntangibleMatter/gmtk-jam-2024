@@ -23,7 +23,7 @@ func _ready() -> void:
 			child.dialogue_started.connect(register_characters_in_dialogue)
 	
 	register_characters_in_dialogue(Dialogic.start(load("res://resources/dialogic/timelines/ticket_guy_tl.dtl")))
-	player.state_machine.transition("Talk", {})
+	player.state_machine.transition("Talk", {"force_stay": true})
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

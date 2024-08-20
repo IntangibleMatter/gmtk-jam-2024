@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GMTK Jam 2024"
-run/main_scene="res://scenes/levels/city.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="intangiblematter_capntoad_gmtk_2024"
 config/features=PackedStringArray("4.3", "GL Compatibility")
@@ -106,7 +106,8 @@ variables={
 "q_figure": 0,
 "q_letter": 0,
 "q_money": 0,
-"stacksize": 0
+"stacksize": 0,
+"talked_to_theatre": false
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://resources/dialogic/style/bubble.tres"]
@@ -128,7 +129,7 @@ NPC=""
 
 [gui]
 
-theme/custom_font="res://assets/fonts/Arcon-Regular.ttf"
+theme/custom_font="res://assets/fonts/exam_sans.ttf"
 
 [input]
 

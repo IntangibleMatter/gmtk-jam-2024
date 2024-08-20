@@ -7,18 +7,19 @@ func _enter(msg: Dictionary = {}) -> void:
 	var npc: NPCBase = msg.get("npc")
 	player.velocity = Vector2.ZERO
 	player.anim_player.play("stand")
-	get_viewport().set_input_as_handled()
+	
+	Dialogic.timeline_ended.connect(
+		func() -> void: 
+			transition.emit("Idle", {})
+			player.talk_delay = 0.75
+	)
 	
 	if not npc:
 		if not force_stay:
 			print("LEAVING TALK STATE")
 			transition.emit("Idle", {})
 		return
-	Dialogic.timeline_ended.connect(
-		func() -> void: 
-			transition.emit("Idle", {})
-			player.talk_delay = 0.75
-	)
+	
+	get_viewport().set_input_as_handled()
+
 	npc.start_convo()
-	
-	

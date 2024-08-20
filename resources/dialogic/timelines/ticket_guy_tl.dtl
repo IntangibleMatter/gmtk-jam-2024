@@ -1,4 +1,4 @@
-if {q_money} == 0:
+if {talked_to_theatre} != true:
 	Ticket_Guy: So, that's one ticket for… [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?[/color][br][center][color=dim_gray](Press [SPACE] to advance.)[/color][/center]
 	Finn: Yes please.
 	Ticket_Guy: Yeah, no, that's not happening. [br]You're like 8.
@@ -12,29 +12,29 @@ if {q_money} == 0:
 	Ticket_Guy: ...Rude.
 	Finn: (I have an idea. my friend David has a trenchcoat. He lives [color=BLUE]EAST[/color] of here, I should go find him.)
 	Finn: (And just so I don't forget... I press [color=dim_gray][SPACE][/color] to talk to people.
-	set {q_money} = 1
-elif {q_money} == 1:
-	Ticket_Guy: Still not happening, kid.
+	set {talked_to_theatre} = true
+	[end_timeline]
 elif {q_money} == 2:
-	Finn: Here you go, Ticket Guy. 12 dollars.
+	Stack: Here you go, Ticket Guy. 12 dollars.
 	Ticket_Guy: For...?
-	Finn: One adult ticket for BLOO[color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.[/color]
+	Stack: One adult ticket for BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.
 	Ticket_Guy: ...Can I see some ID?
-	Finn: What? You don't believe that we- (ow) that I am a fully mature adult?[br]My name is... Arthur. I have a job at the toothpaste factory and I pay taxes like anyone else.
+	Stack: What? You don't believe that we- (ow) that I am a fully mature adult?[br]My name is... Arthur. I have a job at the toothpaste factory and I pay taxes like anyone else.
 	Ticket_Guy: Sure. Can I see some ID, Arthur of the toothpaste factory?
-	Finn: I... left it at home?
-	Finn: (Anyone know where we can find some fake ID?)
-	David: (I know a guy, but he lives at the very top of the [color=BLUE]tallest building[/color]. we're gonna need to be taller)
+	Stack: I... left it at home?
+	Stack: (Anyone know where we can find some fake ID?)
+	Stack: (I know a guy, but he lives at the very top of the [color=BLUE]tallest building[/color]. we're gonna need to be taller)
 	set {q_fakeid} = 1
 if {q_fakeid} == 1:
 	Ticket_Guy: Found your ID yet?
-	Finn: Uhhh... nope! Still looking!
+	Stack: Uhhh... nope! Still looking!
 elif {q_fakeid} == 2:
-	Finn: Found my ID! Here you go!
+	Stack: Found my ID! Here you go!
 	Ticket_Guy: Huh. How about that?
-	Finn: So can we see the movie now? [br](ow) I mean, can I see the movie now?
+	Stack: So can we see the movie now? [br](ow) I mean, can I see the movie now?
 	Ticket_Guy: I hate to break it to you, Arthur of the toothpaste factory... [br]But the movie started without you. [br]Like, half an hour ago.
-	Finn: ...Seriously?
+	Stack: ...Seriously?
 	Ticket_Guy: Yeah. Sorry. Took too long finding your ID.
-	Finn: .............. [br](so... what now?) 
-	David: (...i guess we all go home.)
+	Stack: .............. [br](so... what now?) [br](i guess we all go home.)
+else:
+	Ticket_Guy: Still not happening, kid.

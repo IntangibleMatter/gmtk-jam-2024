@@ -1,9 +1,16 @@
 extends Node
 
 @export var quests: Dictionary = {
-	"q_bug": "Find a cool bug",
-	"q_comic": "Get the last GALAXY HIKE Comic",
-	"q_fakeid": "Get the Fake ID",
+	"q_basketball": "Get the basketball from the tree",
+	"q_berry": "Get a strawberry for Madeline",
+	"q_broom": "Get a broom for Miriam",
+	"q_bug": "Find a cool bug for Kiwi",
+	"q_choco": "Get some Chocolate for Chara",
+	"q_comic": "Get the last GALAXY HIKE Comic from Alex for James",
+	"q_cookie": "Get a cookie for Lancer",
+	"q_figure": "Get Alex's action figure for ???",
+	"q_fakeid": "Get the Fake ID from the kid in the Tallest Tower",
+	"q_letter": "Give Alex's letter to Steve",
 	"q_money": "Get James' money",
 }
 
@@ -27,8 +34,9 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not get_tree().current_scene.is_in_group("world"):
-		return
+	if get_tree().current_scene:
+		if not get_tree().current_scene.is_in_group("world"):
+			return
 	if Dialogic:
 		pass
 	if event.is_action_pressed("open_tasks"):
@@ -43,6 +51,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func update_quests(info: Dictionary) -> void:
+	if info.variable == "stacksize":
+		return
 	var node: Control = item_list.get_node_or_null(info.variable)
 	if not node:
 		node = ITEM_DISPLAY.instantiate()
