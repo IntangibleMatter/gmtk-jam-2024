@@ -1,0 +1,13 @@
+if {q_basketball} == 0:
+	if {stacksize} < 5:
+		Stack: There's a basketball in the tree up here, but it's too high to reach...
+	if {stacksize} >= 5:
+		Stack: Oh hey! There's a basketball up here!
+		Stack: Let's leave it there in case somebody put it there on purpose...
+elif {q_basketball} == 1:
+	if {stacksize} < 5:
+		Stack: Steve and his friends' basketball is up here, but it's too high to reach...
+	if {stacksize} >= 5:
+		Stack: Oh hey! Here's Steve and friends' basketball!
+	set {q_basketball} = 2
+	do Data.remove_character("Basketball")

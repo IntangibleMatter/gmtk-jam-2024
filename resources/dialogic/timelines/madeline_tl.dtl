@@ -1,7 +1,8 @@
 if {q_berry} == 0:
 	Madeline: Hi there!
 	Finn: Hey! Do you wanna join our child tower and sneak into an adult film?
-	Madeline: That sounds fun, I'm just kinda hungry. There weren't any strawberries at the grocery store. Think you could find some for me?
+	Madeline: That sounds fun, I'm just kinda hungry.
+	Madeline: There weren't any strawberries at the grocery store earlier, but they got a shipment just a few minutes ago. Can you check for me?
 	Finn: We'll see what we can do!
 	set {q_berry} = 1
 elif {q_berry} == 1:
