@@ -25,5 +25,5 @@ elif {q_figure} == 2:
 	Stack: Ah ah ah! Hand over the comic book!
 	Muhammad: Fine... I'll climb up and we can go find James.
 	set {q_comic} = 2
-	do Data.add_player_sprite(16.0)
+	do Data.add_player_sprite(16)
 	do Data.remove_character("Muhammad")
