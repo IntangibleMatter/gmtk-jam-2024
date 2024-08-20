@@ -1,0 +1,18 @@
+if {q_baseball} == 0:
+	Finn: Hey there! Wanna watch [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?[/color]
+	Ness: ...Maybe. I'm missing my lucky baseball. Have you seen it?
+	Finn: Nope, but if we find it for you, will you join us?
+	Ness: Sure.
+	Finn: Awesome.
+	set {q_baseball} = 1
+elif {q_basketball} == 1:
+	Ness: Have you found my lucky baseball yet?
+	Finn: Nope, but we're on the case.
+	Ness: Alright, well keep looking. It's important.
+elif {q_baseball} == 2:
+	Finn: Look! We found it!
+	Ness: Wow, thanks! Where was it?
+	Finn: On a roof.
+	Ness: ...I guess that makes sense. Now, how do I get up here...?
+	do Data.add_player_sprite(29.0)
+	do Data.remove_character("Ness")

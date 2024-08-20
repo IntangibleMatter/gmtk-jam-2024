@@ -63,7 +63,9 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Frisk": "res://resources/dialogic/timelines/Frisk.dtl",
+"Steven": "res://resources/dialogic/timelines/Steven.dtl",
 "alex": "res://resources/dialogic/timelines/alex.dtl",
+"anne_tl": "res://resources/dialogic/timelines/anne_tl.dtl",
 "bard": "res://resources/dialogic/timelines/bard.dtl",
 "chara_tl": "res://resources/dialogic/timelines/chara_tl.dtl",
 "david_tl": "res://resources/dialogic/timelines/david_tl.dtl",
@@ -73,6 +75,7 @@ directories/dtl_directory={
 "madeline_tl": "res://resources/dialogic/timelines/madeline_tl.dtl",
 "miriam_tl": "res://resources/dialogic/timelines/miriam_tl.dtl",
 "muhammad_tl": "res://resources/dialogic/timelines/muhammad_tl.dtl",
+"ness__tl": "res://resources/dialogic/timelines/ness__tl.dtl",
 "steve": "res://resources/dialogic/timelines/steve.dtl",
 "susie_tl": "res://resources/dialogic/timelines/susie_tl.dtl",
 "test_timeline": "res://resources/dialogic/timelines/test_timeline.dtl",
@@ -97,19 +100,22 @@ animations/leave_default_wait=true
 animations/join_default_wait=true
 text/autopauses={}
 variables={
+"q_baseball": 0,
 "q_basketball": 0,
 "q_berry": 0,
 "q_broom": 0,
 "q_bug": 0,
 "q_choco": 0,
 "q_comic": 0,
+"q_cookicat": 0,
 "q_cookie": 0,
 "q_fakeid": 0,
 "q_figure": 0,
 "q_letter": 0,
 "q_money": 0,
+"q_shoe": 0,
 "stacksize": 0,
-"talked_to_theatre": false
+"talked_to_theatre": 0
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://resources/dialogic/style/bubble.tres"]

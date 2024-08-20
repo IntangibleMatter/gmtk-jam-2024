@@ -1,0 +1,18 @@
+if {q_cookicat} == 0:
+	Steven: Hi!
+	Finn: Hey! Do you wanna climb on our shoulders and see [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?[/color]
+	Steven: Woah... I don't think I'm allowed to watch a movie like that.
+	Finn: Well, the idea is that no one would find out!
+	Steven: Hmm.. Alright, but you gotta sweeten the deal first.
+	Finn: With...?
+	Steven: With a Cookie Cat! If you get me a Cookie Cat from the store, I'll consider your offer.
+	Finn: Alright, let's go!
+	set {q_cookicat} = 1
+elif {q_cookicat} == 1:
+	Steven: Got the goods?
+	Finn: We're still working on it.
+elif {q_cookicat} == 2:
+	Finn: We've got the goods. 
+	Steven: Mmm... Fresh out of the freezer. Alright, kind sir, I'll take you up on your offer.
+	do Data.add_player_sprite(34.0)
+	do Data.remove_character("Steven")
