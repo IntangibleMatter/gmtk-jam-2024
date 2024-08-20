@@ -1,4 +1,6 @@
-Frisk: ...
+Frisk: * ...
 Stack: Hi!
-Frisk: ... (They start climbing onto your shoulders.)
+Frisk: * ... (They start climbing onto your shoulders.)
 Stack: Hey!
+do Data.add_player_sprite(26.0)
+do Data.remove_character("Frisk")

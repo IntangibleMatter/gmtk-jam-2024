@@ -62,6 +62,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "Frisk": "res://resources/dialogic/timelines/Frisk.dtl",
 "alex": "res://resources/dialogic/timelines/alex.dtl",
+"chara_tl": "res://resources/dialogic/timelines/chara_tl.dtl",
 "david_tl": "res://resources/dialogic/timelines/david_tl.dtl",
 "james": "res://resources/dialogic/timelines/james.dtl",
 "kris_tl": "res://resources/dialogic/timelines/kris_tl.dtl",
@@ -91,6 +92,7 @@ text/autopauses={}
 variables={
 "q_basketball": 0,
 "q_bug": 0,
+"q_choco": 0,
 "q_comic": 0,
 "q_fakeid": 0,
 "q_figure": 0,

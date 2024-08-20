@@ -1,0 +1,13 @@
+if {q_choco} == 0:
+	Chara: Chocolate.
+	Stack: What?
+	Chara: You are doing favors in exchange for adding more onto your child tower, are you not?
+	Stack: ...Yeah?
+	Chara: I want chocolate. From the grocery store. Dark please, not any of that pale imitation.
+	Stack: ...Okay?
+	set {q_choco} = 1
+elif {q_choco} == 1:
+	Chara: Do you have my chocolate yet?
+	Stack: Uh, no.
+	Chara: Then why are you here?
+elif :
