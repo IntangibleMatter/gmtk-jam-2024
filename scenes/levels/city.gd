@@ -21,6 +21,9 @@ func _ready() -> void:
 	for child in interactables.get_children():
 		if child.has_signal("dialogue_started"):
 			child.dialogue_started.connect(register_characters_in_dialogue)
+	
+	register_characters_in_dialogue(Dialogic.start(load("res://resources/dialogic/timelines/ticket_guy_tl.dtl")))
+	player.state_machine.transition("Talk", {})
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,7 +49,6 @@ func camera_cutscene() -> void:
 	tween.tween_property(cutscene_camera, "global_position", player.find_child("BubbleMarker").global_position, 0.2)
 	tween.tween_property(cutscene_camera, "zoom", Vector2.ONE, 0.2)
 	await tween.finished
-
 
 
 func end_camera_cutscene() -> void:

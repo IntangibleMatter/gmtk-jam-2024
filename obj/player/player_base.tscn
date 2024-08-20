@@ -107,7 +107,8 @@ hframes = 7
 
 [node name="Head" type="Sprite2D" parent="SpriteSingle"]
 unique_name_in_owner = true
-position = Vector2(0, -46)
+visible = false
+position = Vector2(0, 19)
 texture = ExtResource("7_oec6h")
 offset = Vector2(0, -22)
 hframes = 6

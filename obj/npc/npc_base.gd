@@ -24,7 +24,7 @@ signal dialogue_started(dialogue_node: Node)
 			#await label_base.ready
 		label_base.position.y = label_offset
 
-@export_range(-64, 10, 1) var bubble_marker_offset: float = -32:
+@export_range(-512, 10, 1) var bubble_marker_offset: float = -32:
 	set(n_marker_offset):
 		bubble_marker_offset = n_marker_offset
 		if not bubble_marker:
@@ -49,6 +49,8 @@ func _ready() -> void:
 	await get_tree().process_frame
 	#prints('labelsize', label.size)
 	label.position.x = -label.size.x/2
+	bubble_marker.position.y = bubble_marker_offset
+	label_base.position.y = label_offset
 	#label.text = char_name
 	#label.size.x = 0
 	#await get_tree().process_frame

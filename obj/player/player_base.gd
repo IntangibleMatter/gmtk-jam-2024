@@ -102,6 +102,7 @@ func _process(delta: float) -> void:
 func change_trenchcoat_size(by: int) -> void:
 	trenchcoat_node_count += by
 	trenchcoat_nodes.resize(trenchcoat_node_count)
+	Dialogic.VAR.set_variable("stacksize", trenchcoat_node_count)
 	if trenchcoat_node_count <= 1:
 		head.hide()
 		trenchcoat_bottom.hide()

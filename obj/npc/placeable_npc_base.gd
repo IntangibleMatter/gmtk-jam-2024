@@ -1,3 +1,5 @@
+@tool
+class_name PlacableNPC
 extends NPCBase
 
 @export var texture: Texture2D:

@@ -15,12 +15,12 @@ overrides = {}
 script = ExtResource("2_x2kta")
 scene = ExtResource("4_3ggmk")
 overrides = {
-"behaviour_distance": "25.0",
 "box_corner_radius": "50.0",
 "box_padding": "Vector2(10, 6)",
 "box_wobble_detail": "0.34",
 "name_label_font": "\"res://assets/fonts/exam_sans.ttf\"",
 "name_label_font_size": "16.0",
+"name_label_offset": "Vector2(0, 8)",
 "normal_font": "\"res://assets/fonts/Arcon-Regular.ttf\"",
 "text_size": "14.0"
 }

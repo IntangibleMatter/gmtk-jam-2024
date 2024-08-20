@@ -1,6 +1,6 @@
 if {q_money} == 0:
 	Finn: Hey David, can I borrow your trenchcoat?
-	David: Sure why?
+	David: Sure, why?
 	Finn: I wanna see BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS, but the ticket guy says i’m too young. [br]So I'm gonna pretend to be an adult.
 	David: Like in the movies?
 	Finn: Yeah!
@@ -8,7 +8,7 @@ if {q_money} == 0:
 	Finn: Probably. Adults are dumb.
 	David: Ha, true! I’m coming with. [br]Do you have money for the ticket?
 	Finn: I have a toonie. Is that enough?
-	David: Dude. Movie tickets are like 12 dollars.
+	David: Dude. Movie tickets are like [wave amp=16]12 dollars.[/wave]
 	Finn: WHAT????
 	David: I know, right?
 	Finn: How are we supposed to get ten whole dollars?

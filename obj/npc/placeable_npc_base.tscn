@@ -29,6 +29,7 @@ script = ExtResource("2_lgxne")
 texture = null
 
 [node name="Label" parent="LabelBase" index="0"]
+visible = false
 offset_left = -0.5
 offset_right = 0.5
 
