@@ -343,6 +343,12 @@ kid_index = 26
 dialogue = ExtResource("16_nga0k")
 char_name = "Alex"
 
+[node name="Steve" parent="Interactables" instance=ExtResource("5_4te83")]
+position = Vector2(-96, 464)
+kid_index = 12
+dialogue = ExtResource("16_nga0k")
+char_name = "Alex"
+
 [node name="PlayerBase" parent="Interactables" instance=ExtResource("5_aw1du")]
 unique_name_in_owner = true
 position = Vector2(160, 96)
