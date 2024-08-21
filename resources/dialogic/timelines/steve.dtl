@@ -33,7 +33,7 @@ elif {q_basketball} == 2:
 	Paublo: Steve and ALex sitting in a tree!
 	Steve: Shut up, haha.
 	Jane: We never will :)
-	set {q_letter} = 1
+	set {q_letter} = 2
 	do Data.remove_character("Steve")
 	Paublo: ...So what are you guys doing?
 	Finn: Sneaking in to see [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.[/color]
