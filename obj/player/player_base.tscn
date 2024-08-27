@@ -119,13 +119,7 @@ frame = 6
 unique_name_in_owner = true
 position = Vector2(0, -32)
 
-[node name="ColorRect" type="ColorRect" parent="SpriteSingle/Head/BubbleMarker"]
-offset_right = 2.0
-offset_bottom = 2.0
-color = Color(1, 0.08, 0.08, 1)
-
 [node name="TrenchcoatTop" type="Sprite2D" parent="SpriteSingle/Head"]
-z_index = 1
 position = Vector2(0, -5)
 texture = ExtResource("9_bah6s")
 

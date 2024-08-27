@@ -27,6 +27,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"A Bug": "res://resources/dialogic/characters/A Bug.dch",
 "Alex": "res://resources/dialogic/characters/Alex.dch",
 "Anne": "res://resources/dialogic/characters/Anne.dch",
 "Basketball": "res://resources/dialogic/characters/Basketball.dch",
@@ -50,6 +51,7 @@ directories/dch_directory={
 "Madeline": "res://resources/dialogic/characters/Madeline.dch",
 "Miriam": "res://resources/dialogic/characters/Miriam.dch",
 "Muhammad": "res://resources/dialogic/characters/Muhammad.dch",
+"Mysterious Roof Person": "res://resources/dialogic/characters/Mysterious Roof Person.dch",
 "Ness": "res://resources/dialogic/characters/Ness.dch",
 "Paublo": "res://resources/dialogic/characters/Paublo.dch",
 "Stack": "res://resources/dialogic/characters/Stack.dch",
@@ -58,13 +60,11 @@ directories/dch_directory={
 "Sunny": "res://resources/dialogic/characters/Sunny.dch",
 "Susie": "res://resources/dialogic/characters/Susie.dch",
 "Tedd": "res://resources/dialogic/characters/Tedd.dch",
-"Ticket_Guy": "res://resources/dialogic/characters/Ticket Guy.dch",
+"Ticket Guy": "res://resources/dialogic/characters/Ticket Guy.dch",
 "bloodbath": "res://resources/dialogic/characters/bloodbath.dch",
 "bookstore": "res://resources/dialogic/characters/bookstore.dch",
-"bug": "res://resources/dialogic/characters/A Bug.dch",
 "finn": "res://assets/graphics/finn.dch",
-"grocery": "res://resources/dialogic/characters/grocery.dch",
-"mystery": "res://resources/dialogic/characters/Mysterious Roof Person.dch"
+"grocery": "res://resources/dialogic/characters/grocery.dch"
 }
 directories/dtl_directory={
 "Frisk": "res://resources/dialogic/timelines/Frisk.dtl",
@@ -94,8 +94,8 @@ directories/dtl_directory={
 "susie_tl": "res://resources/dialogic/timelines/susie_tl.dtl",
 "tedd_tl": "res://resources/dialogic/timelines/tedd_tl.dtl",
 "test_timeline": "res://resources/dialogic/timelines/test_timeline.dtl",
-"theatre": "res://resources/dialogic/timelines/timeline.dtl",
 "ticket_guy_tl": "res://resources/dialogic/timelines/ticket_guy_tl.dtl",
+"timeline": "res://resources/dialogic/timelines/timeline.dtl",
 "toy": "res://resources/dialogic/timelines/toy.dtl"
 }
 text/letter_speed=0.01
@@ -125,8 +125,8 @@ variables={
 "q_cat": 0,
 "q_choco": 0,
 "q_comic": 0,
-"q_cookicat": 0,
 "q_cookie": 0,
+"q_cookiecat": 0,
 "q_dino": 0,
 "q_fakeid": 0,
 "q_figure": 0,
