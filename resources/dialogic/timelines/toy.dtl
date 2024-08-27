@@ -1,3 +1,5 @@
+if {q_money} < 2:
+	Finn: I don't think we have enough money to get anything yet...
 if {q_dino} == 1:
 	do Quest.store_fade()
 	[wait time="3.0"]

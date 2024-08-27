@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://ddlywhfxkqk7i"]
+[gd_scene load_steps=63 format=4 uid="uid://ddlywhfxkqk7i"]
 
 [ext_resource type="Script" path="res://scenes/levels/city.gd" id="1_g7kf5"]
 [ext_resource type="Texture2D" uid="uid://chqrw0v1fs4le" path="res://assets/graphics/outdoors_tiles.png" id="2_5git5"]
@@ -31,6 +31,7 @@
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/bard.dtl" id="25_58i8s"]
 [ext_resource type="Shader" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble.gdshader" id="25_wo76e"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/anne_tl.dtl" id="26_bgaun"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/fakeid_tl.dtl" id="26_yu7xd"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/luz_tl.dtl" id="27_mgrq7"]
 [ext_resource type="Texture2D" uid="uid://beiqlc6wjgbcy" path="res://assets/graphics/bug.png" id="27_tei0b"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/lilac.dtl" id="28_v1dc0"]
@@ -40,7 +41,11 @@
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/basketball.dtl" id="31_ec8xu"]
 [ext_resource type="Texture2D" uid="uid://ccj3s3socue2" path="res://assets/graphics/broom.png" id="34_liavo"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/broom.dtl" id="35_e48cc"]
+[ext_resource type="Texture2D" uid="uid://dolimrdmjppnh" path="res://assets/graphics/shoe.png" id="36_fe5ah"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/shoe.dtl" id="37_oyhsm"]
+[ext_resource type="Texture2D" uid="uid://bwu6txhm2ctse" path="res://assets/graphics/berry.png" id="38_j761h"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/grocer.dtl" id="39_7qvqx"]
+[ext_resource type="Resource" path="res://resources/dialogic/timelines/berry.dtl" id="39_tb2gp"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/book.dtl" id="40_1ritq"]
 [ext_resource type="Resource" path="res://resources/dialogic/timelines/toy.dtl" id="40_tlhcs"]
 
@@ -470,25 +475,25 @@ kid_index = 37
 dialogue = ExtResource("25_58i8s")
 char_name = "Kiwi"
 
-[node name="Mystery Person" parent="Interactables" instance=ExtResource("5_4te83")]
+[node name="Mysterious Roof Person" parent="Interactables" instance=ExtResource("5_4te83")]
 position = Vector2(2912, -288)
 kid_index = 8
-dialogue = ExtResource("23_c51dk")
-char_name = "Mystery Person"
+dialogue = ExtResource("26_yu7xd")
+char_name = "Mysterious Roof Person"
 
-[node name="CollisionShape2D" parent="Interactables/Mystery Person" index="1"]
+[node name="CollisionShape2D" parent="Interactables/Mysterious Roof Person" index="1"]
 position = Vector2(0, 360)
 shape = SubResource("CircleShape2D_tq7cf")
 
-[node name="Label" parent="Interactables/Mystery Person/LabelBase" index="0"]
-offset_left = -77.0
-offset_right = 77.0
-text = "Mystery Person"
+[node name="Label" parent="Interactables/Mysterious Roof Person/LabelBase" index="0"]
+offset_left = -114.0
+offset_right = 114.0
+text = "Mysterious Roof Person"
 
-[node name="ColorRect" parent="Interactables/Mystery Person/LabelBase/Label" index="0"]
+[node name="ColorRect" parent="Interactables/Mysterious Roof Person/LabelBase/Label" index="0"]
 material = SubResource("ShaderMaterial_dea6d")
 
-[node name="Sprite2D" parent="Interactables/Mystery Person" index="3"]
+[node name="Sprite2D" parent="Interactables/Mysterious Roof Person" index="3"]
 frame = 8
 
 [node name="Anne" parent="Interactables" instance=ExtResource("5_4te83")]
@@ -502,7 +507,7 @@ position = Vector2(1088, 528)
 kid_index = 39
 flipped = true
 dialogue = ExtResource("27_mgrq7")
-char_name = "Anne"
+char_name = "Luz"
 
 [node name="Lilac" parent="Interactables" instance=ExtResource("5_4te83")]
 position = Vector2(1824, 352)
@@ -518,7 +523,7 @@ flipped = true
 dialogue = ExtResource("30_h5d8q")
 char_name = "Steven"
 
-[node name="Ticket_Guy" parent="Interactables" instance=ExtResource("19_0asyr")]
+[node name="Ticket Guy" parent="Interactables" instance=ExtResource("19_0asyr")]
 position = Vector2(160, 64)
 texture = ExtResource("20_gvgt1")
 texture_offset = Vector2(0, -32)
@@ -533,6 +538,23 @@ dialogue = ExtResource("28_wtolp")
 char_name = "A Bug"
 label_offset = -10.0
 bubble_marker_offset = -10.0
+
+[node name="Shoe" parent="Interactables" instance=ExtResource("19_0asyr")]
+position = Vector2(688, 488)
+texture = ExtResource("36_fe5ah")
+dialogue = ExtResource("37_oyhsm")
+char_name = "A Shoe"
+label_offset = -10.0
+bubble_marker_offset = -10.0
+
+[node name="Berry" parent="Interactables" instance=ExtResource("19_0asyr")]
+position = Vector2(872, 576)
+texture = ExtResource("38_j761h")
+texture_offset = Vector2(0, -20)
+dialogue = ExtResource("39_tb2gp")
+char_name = "A Strawberry"
+label_offset = -25.0
+bubble_marker_offset = -25.0
 
 [node name="Broom" parent="Interactables" instance=ExtResource("19_0asyr")]
 position = Vector2(890, 1)
@@ -592,4 +614,4 @@ limit_right = 3936
 limit_bottom = 608
 position_smoothing_speed = 0.0
 
-[editable path="Interactables/Mystery Person"]
+[editable path="Interactables/Mysterious Roof Person"]

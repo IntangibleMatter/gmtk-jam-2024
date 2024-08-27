@@ -1,41 +1,41 @@
 if {talked_to_theatre} != true:
-	Ticket_Guy: So, that's one ticket for… [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?[/color][br][center][color=dim_gray](Press [SPACE] to advance.)[/color][/center]
+	"Ticket Guy": So, that's one ticket for… [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?[/color][br][center][color=dim_gray](Press [SPACE] to advance.)[/color][/center]
 	Finn: Yes please.
-	Ticket_Guy: Yeah, no, that's not happening. [br]You're like 8.
+	"Ticket Guy": Yeah, no, that's not happening. [br]You're like 8.
 	Finn: I'm ten.
-	Ticket_Guy: This is an [wave amp=10]R rated movie.[/wave]
+	"Ticket Guy": This is an [wave amp=10]R rated movie.[/wave]
 	Finn: So?
-	Ticket_Guy: So scram, kid. [br]Unless you wanna get a ticket for [color=DEEP_PINK]TALKING ANIMALS 3\: THE POWER OF FRIENDSHIP[/color]?
+	"Ticket Guy": So scram, kid. [br]Unless you wanna get a ticket for [color=DEEP_PINK]TALKING ANIMALS 3\: THE POWER OF FRIENDSHIP[/color]?
 	Finn: No way.
-	Ticket_Guy: C'mon man, the first two were great. [br]What do you have against talking animals?
+	"Ticket Guy": C'mon man, the first two were great. [br]What do you have against talking animals?
 	Finn: They're lame and so are you.
-	Ticket_Guy: ...Rude.
+	"Ticket Guy": ...Rude.
 	Finn: (I have an idea. my friend David has a trenchcoat. He lives [color=BLUE]EAST[/color] of here, I should go find him.)
 	Finn: (And just so I don't forget... I press [color=dim_gray][SPACE][/color] to talk to people.
 	set {talked_to_theatre} = true
 	[end_timeline]
-elif {q_money} == 2:
+elif {q_money} == 2 and {q_fakeid} == 0:
 	Stack: Here you go, Ticket Guy. 12 dollars.
-	Ticket_Guy: For...?
+	"Ticket Guy": For...?
 	Stack: One adult ticket for BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS.
-	Ticket_Guy: ...Can I see some ID?
+	"Ticket Guy": ...Can I see some ID?
 	Stack: What? You don't believe that we- (ow) that I am a fully mature adult?[br]My name is... Arthur. I have a job at the toothpaste factory and I pay taxes like anyone else.
-	Ticket_Guy: Sure. Can I see some ID, Arthur of the toothpaste factory?
+	"Ticket Guy": Sure. Can I see some ID, Arthur of the toothpaste factory?
 	Stack: I... left it at home?
 	Stack: (Anyone know where we can find some fake ID?)
 	Stack: (I know a guy, but he lives at the very top of the [color=BLUE]tallest building[/color]. we're gonna need to be taller)
 	set {q_fakeid} = 1
-if {q_fakeid} == 1:
-	Ticket_Guy: Found your ID yet?
+elif {q_fakeid} == 1:
+	"Ticket Guy": Found your ID yet?
 	Stack: Uhhh... nope! Still looking!
 elif {q_fakeid} == 2:
 	Stack: Found my ID! Here you go!
-	Ticket_Guy: Huh. How about that?
+	"Ticket Guy": Huh. How about that?
 	Stack: So can we see the movie now? [br](ow) I mean, can I see the movie now?
-	Ticket_Guy: I hate to break it to you, Arthur of the toothpaste factory... [br]But the movie started without you. [br]Like, half an hour ago.
+	"Ticket Guy": I hate to break it to you, Arthur of the toothpaste factory... [br]But the movie started without you. [br]Like, half an hour ago.
 	Stack: ...Seriously?
-	Ticket_Guy: Yeah. Sorry. Took too long finding your ID.
+	"Ticket Guy": Yeah. Sorry. Took too long finding your ID.
 	Stack: .............. [br](so... what now?) [br](i guess we all go home.)
 	do Data.go_to_end()
 else:
-	Ticket_Guy: Still not happening, kid.
+	"Ticket Guy": Still not happening, kid.

@@ -1,7 +1,7 @@
 if {q_figure} == 0:
 	Finn: Hey Alex!
 	Alex: Hey... everyone?
-if {q_letter} == 0:
+elif {q_letter} == 0:
 	Alex: Hey guys!
 	Finn: We need your GALAXY HIKE action figure.
 	Alex: You need Spork? Why?

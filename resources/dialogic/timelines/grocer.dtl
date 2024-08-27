@@ -1,4 +1,6 @@
-if {q_cookie} == 1 or {q_cookiecat} == 1 or {q_berry} == 1 or {q_choco} == 1:
+if not {q_money} == 2:
+	Finn: I don't think we have enough money to get anything yet...
+if {q_cookie} == 1 or {q_cookiecat} == 1 or {q_choco} == 1:
 	do Quest.store_fade()
 	[wait time="3.0"]
 	if {q_cookie} == 1:
@@ -7,9 +9,9 @@ if {q_cookie} == 1 or {q_cookiecat} == 1 or {q_berry} == 1 or {q_choco} == 1:
 	if {q_cookiecat} == 1:
 		Finn: (You got the Cookie Cat!)
 		set {q_cookiecat} = 2
-	if {q_berry} == 1:
-		Finn: (You got the strawberry!)
-		set {q_berry} = 2
+# 	if {q_berry} == 1:
+# 		Finn: (You got the strawberry!)
+# 		set {q_berry} = 2
 	if {q_choco} == 1:
 		Finn: (You got the chocolate!)
 		set {q_choco} = 2

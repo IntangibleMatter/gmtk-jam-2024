@@ -83,7 +83,7 @@ func update_target_char(char: DialogicCharacter) -> void:
 		target_char = interactables.get_node_or_null(cname)
 	
 	if target_char:
-		var marker: Node2D = target_char.find_child("BubbleMarker")
+		var marker: Node2D = target_char.find_child("BubbleMarker") if not cname == "Finn" else null
 		var tpos: Vector2
 		if not marker:
 			tpos = target_char.global_position

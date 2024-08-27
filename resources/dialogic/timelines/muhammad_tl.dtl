@@ -1,7 +1,7 @@
-if {q_money} == 0:
+if {q_money} == 0 or {q_comic} == 0:
 	Finn: Hey
 	Muhammad: Hey
-if {q_figure} == 0:
+elif {q_figure} == 0:
 	Finn: Hey, Muhammad.
 	Muhammad: Hi. Woah, what are you guys doing?
 	Finn: We're trying to trick the ticket guy into letting us see [color=red]BLOODBATH MURDERKILL\: RETURN OF THE COCAINE WARRIORS?[/color]
