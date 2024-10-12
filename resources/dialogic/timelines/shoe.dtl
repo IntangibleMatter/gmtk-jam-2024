@@ -1,0 +1,6 @@
+if {q_shoe} == 0:
+	Finn: I wonder why there's a shoe here...
+elif {q_shoe} == 1:
+	Finn: This must be Anne's shoe! We should get it to her.
+	set {q_shoe} = 2 
+	do Data.remove_character("Shoe")

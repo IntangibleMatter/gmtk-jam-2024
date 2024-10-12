@@ -1,0 +1,7 @@
+if {q_berry} == 0:
+	Finn: Oh nice, strawberries!
+elif {q_berry} == 1:
+	Finn: Oh! Perfect, Madeline wanted some berries.
+	Finn: Let's take them for her.
+	set {q_berry} = 2
+	do Data.remove_character("Berry")

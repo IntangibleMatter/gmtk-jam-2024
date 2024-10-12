@@ -136,4 +136,16 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_hugqh")
 theme_override_styles/normal = ExtResource("10_4delt")
 text = "Play!"
 
+[node name="Label" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "v1.0.1"
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

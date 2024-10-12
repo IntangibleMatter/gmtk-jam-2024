@@ -7,8 +7,7 @@ var data: Dictionary = {}
 var player_height: int = 1
 
 func go_to_end() -> void:
-	# TODO: MAKE THIS GO TO THE END SCREEEEEN
-	pass
+	get_tree().change_scene_to_file("res://scenes/ending.tscn")
 
 
 func get_player() -> Player:

@@ -1,0 +1,10 @@
+if {q_money} < 2:
+	Finn: I don't think we have enough money to get anything yet...
+if {q_dino} == 1:
+	do Quest.store_fade()
+	[wait time="3.0"]
+	Finn: (You got the dino plushie!)
+	set {q_dino} = 2
+	Stack: ...why do you always say what we get at these stores out loud?
+else:
+	Finn: We don't really have any reason to go here right now...

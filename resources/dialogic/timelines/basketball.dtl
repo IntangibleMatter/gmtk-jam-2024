@@ -9,5 +9,5 @@ elif {q_basketball} == 1:
 		Stack: Steve and his friends' basketball is up here, but it's too high to reach...
 	if {stacksize} >= 5:
 		Stack: Oh hey! Here's Steve and friends' basketball!
-	set {q_basketball} = 2
-	do Data.remove_character("Basketball")
+		set {q_basketball} = 2
+		do Data.remove_character("Basketball")

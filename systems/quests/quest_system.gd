@@ -1,17 +1,23 @@
 extends Node
 
 @export var quests: Dictionary = {
+	"q_baseball": "Find Ness' baseball for him",
 	"q_basketball": "Get the basketball from the tree",
 	"q_berry": "Get a strawberry for Madeline",
+	"q_book": "Get an Azura book for Luz",
 	"q_broom": "Get a broom for Miriam",
 	"q_bug": "Find a cool bug for Kiwi",
+	"q_cat": "Find Tedd's cat",
 	"q_choco": "Get some Chocolate for Chara",
-	"q_comic": "Get the last GALAXY HIKE Comic from Alex for James",
+	"q_comic": "Get the GALAXY HIKE Comic from Muhammad for James",
+	"q_cookiecat": "Get a Cookie Cat for Steven",
 	"q_cookie": "Get a cookie for Lancer",
-	"q_figure": "Get Alex's action figure for ???",
+	"q_dino": "Get a dino stuffie for Lilac",
+	"q_figure": "Get Alex's action figure for Muhammad",
 	"q_fakeid": "Get the Fake ID from the kid in the Tallest Tower",
 	"q_letter": "Give Alex's letter to Steve",
 	"q_money": "Get James' money",
+	"q_shoe": "Find and retrieve Anne's shoe",
 }
 
 const ITEM_DISPLAY: PackedScene = preload("res://systems/quests/item_display.tscn")
